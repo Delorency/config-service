@@ -32,12 +32,10 @@ func (h *SchemaHandler) UploadSchema(w http.ResponseWriter, r *http.Request) {
 		WriteError(w, http.StatusInternalServerError, "failed to read file")
 		return
 	}
-
 	if err := h.service.CreateSchemaFromFile(serviceID, content, header.Filename); err != nil {
 		WriteError(w, http.StatusBadRequest, err.Error())
 		return
 	}
-
 	WriteJSON(w, http.StatusCreated, map[string]string{
 		"service_id": serviceID,
 		"filename":   header.Filename,

@@ -11,6 +11,7 @@ type ConfigHandler struct {
 
 type ConfigHandlerI interface {
 	CreateConfig(http.ResponseWriter, *http.Request)
+	UpdateConfig(http.ResponseWriter, *http.Request)
 	GetConfig(http.ResponseWriter, *http.Request)
 }
 

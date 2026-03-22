@@ -11,7 +11,7 @@ import (
 func (s *ConfigService) CreateConfig(ctx context.Context, serviceID string, data []byte) (*models.Config, error) {
 	_, err := s.repo.GetCurrent(ctx, serviceID)
 	if err == nil {
-		return nil, fmt.Errorf("config for service %s already exists, use update instead", serviceID)
+		return nil, fmt.Errorf("config for service %s already exists", serviceID)
 	}
 
 	if s.validator != nil {

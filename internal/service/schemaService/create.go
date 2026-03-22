@@ -16,7 +16,7 @@ func (s *SchemaService) CreateSchemaFromFile(serviceID string, fileContent []byt
 		return fmt.Errorf("only JSON files are allowed, got %s", ext)
 	}
 
-	var schema map[string]interface{}
+	var schema map[string]any
 	if err := json.Unmarshal(fileContent, &schema); err != nil {
 		return fmt.Errorf("invalid JSON: %w", err)
 	}

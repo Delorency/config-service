@@ -36,12 +36,14 @@ func NewRouter(logger *log.Logger, schemadir string,
 
 	// router.Get("/swagger/*", httpSwagger.WrapHandler)
 
-	router.Post("/schema", schemaH.UploadSchema)
-	router.Get("/schema/{id}", schemaH.GetSchema)
-	router.Delete("/schema/{id}", schemaH.DeleteSchema)
+	router.Post("/schema/{service_id}", schemaH.UploadSchema)
+	router.Get("/schema/{service_id}", schemaH.GetSchema)
+	router.Delete("/schema/{service_id}", schemaH.DeleteSchema)
 
-	router.Post("/schema", configH.CreateConfig)
-	router.Get("/schema/{id}", configH.GetConfig)
+	router.Post("/config/{service_id}", configH.CreateConfig)
+	router.Patch("/config/{service_id}", configH.UpdateConfig)
+	router.Put("/config/{service_id}", configH.UpdateConfig)
+	router.Get("/config/{service_id}", configH.GetConfig)
 
 	return router
 }

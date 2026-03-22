@@ -69,7 +69,9 @@ type Config struct {
 }
 
 func MustLoad() *Config {
-	godotenv.Load("./configs/.env")
+	if err := godotenv.Load("./configs/.env"); err != nil {
+		log.Fatalf("file has not found: %v", err)
+	}
 
 	var cfgHTTPServer ConfigHTTPServer
 	var cfgGRPCServer ConfigGRPCServer
@@ -98,7 +100,7 @@ func MustLoad() *Config {
 		log.Fatalln("Ошибка чтения настроек logger из .env файла")
 	}
 	if err := cleanenv.ReadEnv(&cfgSchema); err != nil {
-		log.Fatalln("Ошибка чтения настроек logger из .env файла")
+		log.Fatalln("Ошибка чтения настроек schema из .env файла")
 	}
 
 	return &Config{&cfgHTTPServer, &cfgGRPCServer, &cfgDatabase, &cfgRedis, &cfgRabbit, &cfgLogger, &cfgSchema}

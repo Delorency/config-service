@@ -3,13 +3,14 @@ package configHandler
 import (
 	"encoding/json"
 	"io"
-	. "main/internal/api/http/handlers"
 	"net/http"
+
+	. "main/internal/api/http/handlers"
 
 	"github.com/go-chi/chi"
 )
 
-func (h *ConfigHandler) CreateConfig(w http.ResponseWriter, r *http.Request) {
+func (h *ConfigHandler) UpdateConfig(w http.ResponseWriter, r *http.Request) {
 	serviceID := chi.URLParam(r, "service_id")
 	if serviceID == "" {
 		WriteError(w, http.StatusBadRequest, "service_id is required")
@@ -40,17 +41,17 @@ func (h *ConfigHandler) CreateConfig(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	config, err := h.service.CreateConfig(r.Context(), serviceID, content)
+	config, err := h.service.UpdateConfig(r.Context(), serviceID, content)
 	if err != nil {
 		WriteError(w, http.StatusBadRequest, err.Error())
 		return
 	}
 
-	WriteJSON(w, http.StatusCreated, map[string]interface{}{
+	WriteJSON(w, http.StatusOK, map[string]interface{}{
 		"service_id": config.ServiceID,
 		"version":    config.Version,
 		"filename":   header.Filename,
-		"created_at": config.CreatedAt,
-		"message":    "config created successfully",
+		"updated_at": config.UpdatedAt,
+		"message":    "config updated successfully",
 	})
 }

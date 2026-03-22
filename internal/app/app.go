@@ -30,9 +30,7 @@ func init() {
 	cfg = config.MustLoad()
 }
 
-// Start запускает HTTP и gRPC серверы
 func Start() {
-	// Инициализируем логгеры
 	apilogger := logger.GetAPILogger(
 		fmt.Sprintf("%s/%s", cfg.Logger.LogsDir, cfg.Logger.APIlp),
 	)
@@ -40,7 +38,6 @@ func Start() {
 		fmt.Sprintf("%s/%s", cfg.Logger.LogsDir, cfg.Logger.DBlp),
 	)
 
-	// Подключаемся к БД
 	db := checkUpDB(dblogger)
 
 	configRepo := repo.NewConfigRepository(db)
@@ -51,7 +48,6 @@ func Start() {
 		panic("Cannot create schemes filder")
 	}
 
-	// Создаем HTTP сервер
 	httpServer := ht.NewHTTPServer(
 		cfg.HTTPServer.Host,
 		cfg.HTTPServer.Port,
@@ -62,28 +58,24 @@ func Start() {
 		validator,
 	)
 
-	// Создаем gRPC сервер
 	grpcServer := grpc.NewGRPCServer(
 		configRepo,
 		watcherManager,
 		validator,
 	)
 
-	// Контекст для graceful shutdown
 	ctx, cancel := signal.NotifyContext(context.Background(), os.Interrupt, syscall.SIGTERM)
 	defer cancel()
 
-	// Запускаем HTTP сервер
 	go func() {
-		apilogger.Printf("HTTP Server starting on %s:%s", cfg.HTTPServer.Host, cfg.HTTPServer.Port)
-		log.Printf("HTTP server listening on %s:%s", cfg.HTTPServer.Host, cfg.HTTPServer.Port)
+		apilogger.Printf("HTTP Server starting on %s:%d", cfg.HTTPServer.Host, cfg.HTTPServer.Port)
+		log.Printf("HTTP server listening on %s:%d", cfg.HTTPServer.Host, cfg.HTTPServer.Port)
 
 		if err := httpServer.ListenAndServe(); err != nil && err != http.ErrServerClosed {
 			log.Fatalf("HTTP server error: %v", err)
 		}
 	}()
 
-	// Запускаем gRPC сервер
 	go func() {
 		apilogger.Printf("gRPC Server starting on %s:%d", cfg.GRPCServer.Host, cfg.GRPCServer.Port)
 		log.Printf("gRPC server listening on %s:%d", cfg.GRPCServer.Host, cfg.GRPCServer.Port)
