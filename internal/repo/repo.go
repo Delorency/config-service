@@ -33,7 +33,7 @@ func (r *ConfigRepository) Create(ctx context.Context, config *models.Config) er
 	return r.db.WithContext(ctx).Create(config).Error
 }
 
-func (r *ConfigRepository) Update(ctx context.Context, config *models.Config, changedBy string) error {
+func (r *ConfigRepository) Update(ctx context.Context, config *models.Config) error {
 	return r.db.WithContext(ctx).Transaction(func(tx *gorm.DB) error {
 
 		var current models.Config
@@ -45,7 +45,6 @@ func (r *ConfigRepository) Update(ctx context.Context, config *models.Config, ch
 			ServiceID: current.ServiceID,
 			Data:      current.Data,
 			Version:   current.Version,
-			ChangedBy: changedBy,
 		}
 		if err := tx.Create(&history).Error; err != nil {
 			return err
@@ -81,7 +80,7 @@ func (r *ConfigRepository) ListVersions(ctx context.Context, serviceID string, l
 	return history, err
 }
 
-func (r *ConfigRepository) Rollback(ctx context.Context, serviceID string, targetVersion int, rolledBy string) (*models.Config, error) {
+func (r *ConfigRepository) Rollback(ctx context.Context, serviceID string, targetVersion int) (*models.Config, error) {
 	var result *models.Config
 
 	err := r.db.WithContext(ctx).Transaction(func(tx *gorm.DB) error {
@@ -100,7 +99,6 @@ func (r *ConfigRepository) Rollback(ctx context.Context, serviceID string, targe
 			ServiceID: current.ServiceID,
 			Data:      current.Data,
 			Version:   current.Version,
-			ChangedBy: rolledBy,
 		}
 		if err := tx.Create(&history).Error; err != nil {
 			return err

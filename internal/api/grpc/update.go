@@ -16,7 +16,7 @@ func (s *GRPCServer) UpdateConfig(ctx context.Context, req *pb.UpdateRequest) (*
 		Data:      req.Data,
 	}
 
-	if err := s.repo.Update(ctx, config, req.UpdatedBy); err != nil {
+	if err := s.repo.Update(ctx, config); err != nil {
 		return nil, status.Errorf(codes.Internal, "failed to update: %v", err)
 	}
 

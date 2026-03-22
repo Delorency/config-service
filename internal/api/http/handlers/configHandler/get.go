@@ -1,4 +1,4 @@
-package schemaHandler
+package configHandler
 
 import (
 	. "main/internal/api/http/handlers"
@@ -7,20 +7,17 @@ import (
 	"github.com/go-chi/chi"
 )
 
-func (h *SchemaHandler) GetSchema(w http.ResponseWriter, r *http.Request) {
+func (h *ConfigHandler) GetConfig(w http.ResponseWriter, r *http.Request) {
 	serviceID := chi.URLParam(r, "service_id")
 	if serviceID == "" {
 		WriteError(w, http.StatusBadRequest, "service_id is required")
 		return
 	}
 
-	data, err := h.service.GetSchema(serviceID)
+	config, err := h.service.GetConfig(r.Context(), serviceID)
 	if err != nil {
 		WriteError(w, http.StatusNotFound, err.Error())
 		return
 	}
-
-	w.Header().Set("Content-Type", "application/json")
-	w.WriteHeader(http.StatusOK)
-	w.Write(data)
+	WriteJSON(w, 200, config.Data)
 }

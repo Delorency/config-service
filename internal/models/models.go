@@ -24,7 +24,6 @@ type ConfigHistory struct {
 	Data      datatypes.JSON `gorm:"type:jsonb;not null"`
 	Version   int            `gorm:"not null"`
 	CreatedAt time.Time      `gorm:"autoCreateTime"`
-	ChangedBy string         `gorm:"size:100"`
 }
 
 func (ConfigHistory) TableName() string {

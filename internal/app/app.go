@@ -15,7 +15,6 @@ import (
 	"main/internal/api/grpc"
 	ht "main/internal/api/http"
 	config "main/internal/config"
-	merger "main/internal/core/merger"
 	"main/internal/core/validator"
 	logger "main/internal/logger"
 	repo "main/internal/repo"
@@ -44,19 +43,12 @@ func Start() {
 	// Подключаемся к БД
 	db := checkUpDB(dblogger)
 
-	// Инициализируем компоненты ядра
 	configRepo := repo.NewConfigRepository(db)
 	watcherManager := watcher.NewWatcherManager()
-	merger := merger.NewMerger()
 
-	// Инициализируем валидатор (если есть схема)
-	var val *validator.Validator = validator.NewValidator()
-	if cfg.Validator.SchemaPath != "" {
-		var err error
-		validator, err = validator.NewValidator(cfg.Validator.SchemaPath)
-		if err != nil {
-			apilogger.Printf("Warning: Failed to load validator schema: %v", err)
-		}
+	validator, err := validator.NewValidator(cfg.Schema.SchemasDir)
+	if err != nil {
+		panic("Cannot create schemes filder")
 	}
 
 	// Создаем HTTP сервер
@@ -64,12 +56,17 @@ func Start() {
 		cfg.HTTPServer.Host,
 		cfg.HTTPServer.Port,
 		apilogger,
+		cfg.Schema.SchemasDir,
+		configRepo,
+		watcherManager,
+		validator,
 	)
 
 	// Создаем gRPC сервер
 	grpcServer := grpc.NewGRPCServer(
 		configRepo,
 		watcherManager,
+		validator,
 	)
 
 	// Контекст для graceful shutdown
