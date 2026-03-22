@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+package config;
+
+option go_package = "main/api/proto";
+
+// Сервис для конфигов
+service ConfigService {
+    // GetConfig возвращает текущую конфигурацию для указанного сервиса.
+    rpc GetConfig(GetRequest) returns (Config);
+
+    // WatchConfig открывает стрим для отслеживания изменений конфигурации.
+    rpc WatchConfig(WatchRequest) returns (stream Config);
+
+    // UpdateConfig обновляет данные конфигурации и инкрементирует версию.
+    rpc UpdateConfig(UpdateRequest) returns (Config);
+}
+
+message GetRequest {
+    string service_id = 1;
+}
+
+message WatchRequest {
+    string service_id = 1;
+    int32 current_version = 2;
+}
+
+message UpdateRequest {
+    string service_id = 1;
+    bytes data = 2;
+    string updated_by = 3;
+}
+
+message Config {
+    string service_id = 1;
+    bytes data = 2;
+    int32 version = 3;
+}

@@ -2,14 +2,22 @@ package config
 
 import (
 	"log"
+	"time"
 
 	"github.com/ilyakaznacheev/cleanenv"
 	"github.com/joho/godotenv"
 )
 
 type ConfigHTTPServer struct {
-	Host string `env:"HOST" env-default:"localhost"`
-	Port string `env:"PORT" env-default:"8080"`
+	Host            string        `env:"HTTPHOST" env-default:"localhost"`
+	Port            int           `env:"HTTPPORT" env-default:"8080"`
+	ShutdownTimeout time.Duration `env:"HTTPSHUTDOWNTIMEOUT" env-default:"30s"`
+}
+
+type ConfigGRPCServer struct {
+	Host            string        `env:"GRPCHOST" env-default:"localhost"`
+	Port            int           `env:"GRPCPORT" env-default:"8080"`
+	ShutdownTimeout time.Duration `env:"GRPCSHUTDOWNTIMEOUT" env-default:"30s"`
 }
 
 type ConfigDatabase struct {
@@ -30,7 +38,7 @@ type ConfigRedis struct {
 
 type ConfigRabbitMQ struct {
 	Host     string `env:"RABBIT_HOST" default:"localhost"`
-	Port     string `env:"RABBIT_PORT" default:"5672"`
+	Port     int    `env:"RABBIT_PORT" default:"5672"`
 	User     string `env:"RABBIT_USER" default:"guest"`
 	Password string `env:"RABBIT_PASSWORD" default:"guest"`
 	VHost    string `env:"RABBIT_VHOST" default:"/"`
@@ -46,25 +54,36 @@ type ConfigLogger struct {
 	LogsDir string `env:"LOGSDIR"`
 }
 
+type ConfigSchema struct {
+	SchemasDir string `env:"SCHEMASDIR"`
+}
+
 type Config struct {
 	HTTPServer *ConfigHTTPServer
+	GRPCServer *ConfigGRPCServer
 	Db         *ConfigDatabase
 	Redis      *ConfigRedis
 	Rabbit     *ConfigRabbitMQ
 	Logger     *ConfigLogger
+	Schema     *ConfigSchema
 }
 
 func MustLoad() *Config {
 	godotenv.Load("./configs/.env")
 
-	var cfgHttpServer ConfigHTTPServer
+	var cfgHTTPServer ConfigHTTPServer
+	var cfgGRPCServer ConfigGRPCServer
 	var cfgDatabase ConfigDatabase
 	var cfgRedis ConfigRedis
 	var cfgRabbit ConfigRabbitMQ
 	var cfgLogger ConfigLogger
+	var cfgSchema ConfigSchema
 
-	if err := cleanenv.ReadEnv(&cfgHttpServer); err != nil {
+	if err := cleanenv.ReadEnv(&cfgHTTPServer); err != nil {
 		log.Fatalln("Ошибка чтения настроек server из .env файлы")
+	}
+	if err := cleanenv.ReadEnv(&cfgGRPCServer); err != nil {
+		log.Fatalln("Ошибка чтения настроек grpc из .env файлы")
 	}
 	if err := cleanenv.ReadEnv(&cfgDatabase); err != nil {
 		log.Fatalln("Ошибка чтения настроек db из .env файлы")
@@ -78,6 +97,9 @@ func MustLoad() *Config {
 	if err := cleanenv.ReadEnv(&cfgLogger); err != nil {
 		log.Fatalln("Ошибка чтения настроек logger из .env файла")
 	}
+	if err := cleanenv.ReadEnv(&cfgSchema); err != nil {
+		log.Fatalln("Ошибка чтения настроек logger из .env файла")
+	}
 
-	return &Config{&cfgHttpServer, &cfgDatabase, &cfgRedis, &cfgRabbit, &cfgLogger}
+	return &Config{&cfgHTTPServer, &cfgGRPCServer, &cfgDatabase, &cfgRedis, &cfgRabbit, &cfgLogger, &cfgSchema}
 }
