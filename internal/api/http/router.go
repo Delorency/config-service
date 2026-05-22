@@ -3,10 +3,11 @@ package http
 import (
 	"log"
 
-	// _ "auth/docs"
+	_ "main/docs"
 
 	"github.com/go-chi/chi"
 	"github.com/go-chi/chi/middleware"
+	httpSwagger "github.com/swaggo/http-swagger"
 
 	ch "main/internal/api/http/handlers/configHandler"
 	sh "main/internal/api/http/handlers/schemaHandler"
@@ -34,16 +35,16 @@ func NewRouter(logger *log.Logger, schemadir string,
 	schemaH := sh.NewSchemaHandler(ss.NewSchemaService(schemadir))
 	configH := ch.NewConfigHandler(cs.NewConfigService(repo, watcher, validator))
 
-	// router.Get("/swagger/*", httpSwagger.WrapHandler)
+	router.Get("/swagger/*", httpSwagger.WrapHandler)
 
-	router.Post("/schema/{service_id}", schemaH.UploadSchema)
+	router.Post("/schema/{service_id}/upload", schemaH.UploadSchema)
 	router.Get("/schema/{service_id}", schemaH.GetSchema)
 	router.Delete("/schema/{service_id}", schemaH.DeleteSchema)
 
 	router.Post("/config/{service_id}", configH.CreateConfig)
-	router.Patch("/config/{service_id}", configH.UpdateConfig)
-	router.Put("/config/{service_id}", configH.UpdateConfig)
-	router.Get("/config/{service_id}", configH.GetConfig)
+	router.Get("/config/{service_id}", configH.GetConfigList)
+	router.Get("/config/{service_id}/actual", configH.GetActualConfig)
+	router.Get("/config/{service_id}/{version}", configH.GetVersion)
 
 	return router
 }

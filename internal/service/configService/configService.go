@@ -17,8 +17,8 @@ type ConfigService struct {
 type ConfigServiceI interface {
 	GetConfig(context.Context, string) (*models.Config, error)
 	GetVersion(context.Context, string, int) (*models.ConfigHistory, error)
+	ListVersions(ctx context.Context, serviceID string, limit, offset int) ([]models.ConfigHistory, int64, error)
 	CreateConfig(context.Context, string, []byte) (*models.Config, error)
-	UpdateConfig(context.Context, string, []byte) (*models.Config, error)
 	Rollback(context.Context, string, int) (*models.Config, error)
 }
 

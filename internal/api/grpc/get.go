@@ -10,7 +10,7 @@ import (
 )
 
 func (s *GRPCServer) GetConfig(ctx context.Context, req *pb.GetRequest) (*pb.Config, error) {
-	config, err := s.repo.GetCurrent(ctx, req.ServiceId)
+	config, err := s.repo.GetActualVersion(ctx, req.ServiceId)
 	if err != nil {
 		return nil, status.Errorf(codes.Internal, "failed to get config: %v", err)
 	}

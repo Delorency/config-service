@@ -16,11 +16,11 @@ func (s *GRPCServer) UpdateConfig(ctx context.Context, req *pb.UpdateRequest) (*
 		Data:      req.Data,
 	}
 
-	if err := s.repo.Update(ctx, config); err != nil {
+	if err := s.repo.Create(ctx, config); err != nil {
 		return nil, status.Errorf(codes.Internal, "failed to update: %v", err)
 	}
 
-	updated, _ := s.repo.GetCurrent(ctx, req.ServiceId)
+	updated, _ := s.repo.GetActualVersion(ctx, req.ServiceId)
 
 	s.watcher.Notify(req.ServiceId, &watcher.ConfigUpdate{
 		ServiceID: req.ServiceId,

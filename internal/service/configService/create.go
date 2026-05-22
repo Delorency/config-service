@@ -9,9 +9,11 @@ import (
 )
 
 func (s *ConfigService) CreateConfig(ctx context.Context, serviceID string, data []byte) (*models.Config, error) {
-	_, err := s.repo.GetCurrent(ctx, serviceID)
-	if err == nil {
-		return nil, fmt.Errorf("config for service %s already exists", serviceID)
+	current, _ := s.repo.GetActualVersion(ctx, serviceID)
+
+	nextVersion := 1
+	if current != nil {
+		nextVersion = current.Version + 1
 	}
 
 	if s.validator != nil {
@@ -23,19 +25,17 @@ func (s *ConfigService) CreateConfig(ctx context.Context, serviceID string, data
 	config := &models.Config{
 		ServiceID: serviceID,
 		Data:      data,
-		Version:   1,
+		Version:   nextVersion,
 	}
 
 	if err := s.repo.Create(ctx, config); err != nil {
-		return nil, fmt.Errorf("failed to create config: %w", err)
+		return nil, err
 	}
-
-	updated, _ := s.repo.GetCurrent(ctx, serviceID)
 
 	s.watcher.Notify(serviceID, &watcher.ConfigUpdate{
 		ServiceID: serviceID,
-		Data:      updated.Data,
-		Version:   updated.Version,
+		Data:      data,
+		Version:   nextVersion,
 		Timestamp: time.Now().Unix(),
 	})
 

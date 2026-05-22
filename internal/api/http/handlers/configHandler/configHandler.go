@@ -11,8 +11,9 @@ type ConfigHandler struct {
 
 type ConfigHandlerI interface {
 	CreateConfig(http.ResponseWriter, *http.Request)
-	UpdateConfig(http.ResponseWriter, *http.Request)
-	GetConfig(http.ResponseWriter, *http.Request)
+	GetConfigList(http.ResponseWriter, *http.Request)
+	GetActualConfig(http.ResponseWriter, *http.Request)
+	GetVersion(http.ResponseWriter, *http.Request)
 }
 
 func NewConfigHandler(cfgService cs.ConfigServiceI) ConfigHandlerI {

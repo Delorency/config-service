@@ -1,0 +1,374 @@
+definitions:
+  configHandler.ConfigItem:
+    properties:
+      created_at:
+        example: "2024-01-15T10:30:00Z"
+        type: string
+      updated_at:
+        example: "2024-01-15T10:30:00Z"
+        type: string
+      version:
+        example: 5
+        type: integer
+    type: object
+  configHandler.ConfigListResponse:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/configHandler.ConfigItem'
+        type: array
+      limit:
+        example: 50
+        type: integer
+      offset:
+        example: 0
+        type: integer
+      service_id:
+        example: user-service
+        type: string
+      total:
+        example: 15
+        type: integer
+    type: object
+  configHandler.ConfigResponse:
+    properties:
+      created_at:
+        example: "2024-01-15T10:30:00Z"
+        type: string
+      data:
+        additionalProperties: true
+        type: object
+      service_id:
+        example: user-service
+        type: string
+      updated_at:
+        example: "2024-01-15T15:45:00Z"
+        type: string
+      version:
+        example: 5
+        type: integer
+    type: object
+  configHandler.ConfigVersionResponse:
+    properties:
+      created_at:
+        example: "2024-01-14T09:15:00Z"
+        type: string
+      data:
+        additionalProperties: true
+        type: object
+      service_id:
+        example: user-service
+        type: string
+      version:
+        example: 3
+        type: integer
+    type: object
+  configHandler.CreateConfigResponse:
+    properties:
+      created_at:
+        example: "2024-01-15T10:30:00Z"
+        type: string
+      filename:
+        example: config.json
+        type: string
+      message:
+        example: config created successfully
+        type: string
+      service_id:
+        example: user-service
+        type: string
+      version:
+        example: 7
+        type: integer
+    type: object
+  configHandler.ErrorResponse:
+    properties:
+      error:
+        example: service_id is required
+        type: string
+    type: object
+  schemaHandler.UploadSchemaResponse:
+    properties:
+      filename:
+        example: user-schema.json
+        type: string
+      message:
+        example: schema uploaded successfully
+        type: string
+      service_id:
+        example: user-service
+        type: string
+    type: object
+info:
+  contact: {}
+paths:
+  /config/{service_id}:
+    get:
+      consumes:
+      - application/json
+      description: Возвращает список всех версий конфигурации для указанного сервиса
+        с пагинацией. Версии отсортированы по убыванию (новые сверху).
+      parameters:
+      - description: ID сервиса
+        example: user-service
+        in: path
+        name: service_id
+        required: true
+        type: string
+      - description: Количество записей на страницу (макс. 100, по умолчанию 50)
+        example: 20
+        in: query
+        maximum: 100
+        minimum: 1
+        name: limit
+        type: integer
+      - description: Смещение для пагинации
+        example: 0
+        in: query
+        minimum: 0
+        name: offset
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Список версий конфигурации
+          schema:
+            $ref: '#/definitions/configHandler.ConfigListResponse'
+        "400":
+          description: service_id is required
+          schema:
+            $ref: '#/definitions/configHandler.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/configHandler.ErrorResponse'
+      summary: Получение списка версий конфигурации
+      tags:
+      - configs
+    post:
+      consumes:
+      - multipart/form-data
+      description: |-
+        Создает новую конфигурацию для указанного сервиса. Конфигурация загружается в виде JSON файла через multipart/form-data.
+        Файл должен содержать валидный JSON. После успешного создания автоматически инкрементируется версия конфигурации.
+      parameters:
+      - description: ID сервиса
+        example: user-service
+        in: path
+        name: service_id
+        required: true
+        type: string
+      - description: JSON файл с конфигурацией (макс. 5MB)
+        in: formData
+        name: config
+        required: true
+        type: file
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Конфигурация успешно создана
+          schema:
+            $ref: '#/definitions/configHandler.CreateConfigResponse'
+        "400":
+          description: 'Невалидный запрос: отсутствует service_id, файл слишком большой,
+            неверный формат или невалидный JSON'
+          schema:
+            $ref: '#/definitions/configHandler.ErrorResponse'
+        "500":
+          description: Внутренняя ошибка сервера
+          schema:
+            $ref: '#/definitions/configHandler.ErrorResponse'
+      summary: Создание новой конфигурации
+      tags:
+      - configs
+  /config/{service_id}/{version}:
+    get:
+      consumes:
+      - application/json
+      description: Возвращает конфигурацию указанной версии для сервиса. Версии нумеруются
+        с 1 (самая старая) до N (самая новая).
+      parameters:
+      - description: ID сервиса
+        example: user-service
+        in: path
+        name: service_id
+        required: true
+        type: string
+      - description: Номер версии конфигурации
+        example: 3
+        in: path
+        minimum: 1
+        name: version
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Конфигурация указанной версии
+          schema:
+            $ref: '#/definitions/configHandler.ConfigVersionResponse'
+        "400":
+          description: service_id is required | version must be integer
+          schema:
+            $ref: '#/definitions/configHandler.ErrorResponse'
+        "404":
+          description: Конфигурация с указанной версией не найдена
+          schema:
+            $ref: '#/definitions/configHandler.ErrorResponse'
+        "500":
+          description: Внутренняя ошибка сервера
+          schema:
+            $ref: '#/definitions/configHandler.ErrorResponse'
+      summary: Получение конкретной версии конфигурации
+      tags:
+      - configs
+  /config/{service_id}/actual:
+    get:
+      consumes:
+      - application/json
+      description: Возвращает последнюю (актуальную) версию конфигурации для указанного
+        сервиса. Включает данные конфигурации и метаинформацию.
+      parameters:
+      - description: ID сервиса
+        example: user-service
+        in: path
+        name: service_id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Актуальная конфигурация сервиса
+          schema:
+            $ref: '#/definitions/configHandler.ConfigResponse'
+        "400":
+          description: service_id is required
+          schema:
+            $ref: '#/definitions/configHandler.ErrorResponse'
+        "404":
+          description: Конфигурация для указанного сервиса не найдена
+          schema:
+            $ref: '#/definitions/configHandler.ErrorResponse'
+        "500":
+          description: Внутренняя ошибка сервера
+          schema:
+            $ref: '#/definitions/configHandler.ErrorResponse'
+      summary: Получение актуальной конфигурации сервиса
+      tags:
+      - configs
+  /schema/{service_id}:
+    delete:
+      consumes:
+      - application/json
+      description: Удаляет JSON-схему для указанного сервиса по его ID. В случае успеха
+        возвращает информацию об удаленном сервисе.
+      parameters:
+      - description: Уникальный идентификатор сервиса
+        example: user-service
+        in: path
+        name: service_id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: service_id и сообщение об успешном удалении
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+        "400":
+          description: service_id is required
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+        "404":
+          description: схема с указанным service_id не найдена
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+      summary: Удаление схемы сервиса
+      tags:
+      - schemas
+    get:
+      description: Возвращает JSON-схему для указанного сервиса по его ID. Схема используется
+        для валидации конфигураций сервиса.
+      parameters:
+      - description: Уникальный идентификатор сервиса
+        example: user-service
+        in: path
+        name: service_id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: JSON-схема сервиса
+          schema:
+            additionalProperties: true
+            type: object
+        "400":
+          description: service_id is required
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+        "404":
+          description: схема с указанным service_id не найдена
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+      summary: Получение схемы сервиса
+      tags:
+      - schemas
+  /schema/{service_id}/upload:
+    post:
+      consumes:
+      - multipart/form-data
+      description: Загружает JSON-схему для указанного сервиса через multipart/form-data.
+        Поддерживаются файлы с расширениями .json, .yaml, .yml
+      parameters:
+      - description: Уникальный идентификатор сервиса
+        example: user-service
+        in: path
+        name: service_id
+        required: true
+        type: string
+      - description: JSON-файл схемы
+        in: formData
+        name: schema
+        required: true
+        type: file
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Схема успешно загружена
+          schema:
+            $ref: '#/definitions/schemaHandler.UploadSchemaResponse'
+        "400":
+          description: 'Невалидный запрос: отсутствует service_id, файл слишком большой
+            или неверный формат'
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+        "500":
+          description: Внутренняя ошибка сервера
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+      summary: Загрузка JSON-схемы из файла
+      tags:
+      - schemas
+swagger: "2.0"

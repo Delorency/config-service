@@ -3,13 +3,26 @@ package validator
 import (
 	"encoding/json"
 	"fmt"
+	"os"
 	"strings"
 
 	"github.com/xeipuuv/gojsonschema"
 )
 
+// SchemaExists проверяет существование файла схемы
+func (v *Validator) SchemaExists(serviceID string) bool {
+	schemaPath := v.getSchemaPath(serviceID)
+	_, err := os.Stat(schemaPath)
+	return !os.IsNotExist(err)
+}
+
 func (v *Validator) loadSchema(serviceID string) error {
 	schemaPath := v.getSchemaPath(serviceID)
+
+	// Проверяем существование файла
+	if !v.SchemaExists(serviceID) {
+		return fmt.Errorf("schema file not found for service %s at path: %s", serviceID, schemaPath)
+	}
 
 	loader := gojsonschema.NewReferenceLoader("file://" + schemaPath)
 
@@ -31,7 +44,7 @@ func (v *Validator) ValidateByServiceID(serviceID string, config []byte) error {
 
 	if !ok {
 		if err := v.loadSchema(serviceID); err != nil {
-			return nil
+			return fmt.Errorf("failed to load schema for service %s: %w", serviceID, err)
 		}
 
 		v.mu.RLock()
@@ -57,10 +70,21 @@ func (v *Validator) ValidateByServiceID(serviceID string, config []byte) error {
 	return nil
 }
 
+// ValidateByServiceIDWithExistsCheck проверяет существование схемы И валидирует конфиг
+func (v *Validator) ValidateByServiceIDWithExistsCheck(serviceID string, config []byte) error {
+	// Сначала проверяем существование файла схемы
+	if !v.SchemaExists(serviceID) {
+		return fmt.Errorf("schema not found for service '%s'. Please upload schema first", serviceID)
+	}
+
+	// Затем валидируем конфиг
+	return v.ValidateByServiceID(serviceID, config)
+}
+
 func (v *Validator) ValidateByServiceIDMap(serviceID string, config map[string]any) error {
 	data, err := json.Marshal(config)
 	if err != nil {
-		return err
+		return fmt.Errorf("failed to marshal config: %w", err)
 	}
 	return v.ValidateByServiceID(serviceID, data)
 }

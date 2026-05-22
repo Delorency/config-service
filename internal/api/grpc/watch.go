@@ -12,7 +12,7 @@ func (s *GRPCServer) WatchConfig(req *pb.WatchRequest, stream pb.ConfigService_W
 	sub, unsubscribe := s.watcher.Subscribe(serviceID, subscriberID, int(req.CurrentVersion))
 	defer unsubscribe()
 
-	current, err := s.repo.GetCurrent(stream.Context(), serviceID)
+	current, err := s.repo.GetActualVersion(stream.Context(), serviceID)
 	if err != nil {
 		return err
 	}

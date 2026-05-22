@@ -2,20 +2,13 @@ package schemaService
 
 import (
 	"fmt"
+	"main/internal/utils"
 	"os"
 	"path/filepath"
 )
 
 func (s *SchemaService) GetSchema(serviceID string) ([]byte, error) {
-	filename := filepath.Join(s.SchemaDir, serviceID+".json")
-	data, err := os.ReadFile(filename)
-	if err != nil {
-		if os.IsNotExist(err) {
-			return nil, fmt.Errorf("schema not found for service %s", serviceID)
-		}
-		return nil, fmt.Errorf("failed to read schema: %w", err)
-	}
-	return data, nil
+	return utils.GetSchemaFile(serviceID, s.SchemaDir)
 }
 
 func (s *SchemaService) ListSchemas() ([]map[string]string, error) {
