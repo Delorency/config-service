@@ -9,17 +9,17 @@ import (
 )
 
 func (s *ConfigService) CreateConfig(ctx context.Context, serviceID string, data []byte) (*models.Config, error) {
-	current, _ := s.repo.GetActualVersion(ctx, serviceID)
-
-	nextVersion := 1
-	if current != nil {
-		nextVersion = current.Version + 1
-	}
-
 	if s.validator != nil {
 		if err := s.validator.ValidateByServiceID(serviceID, data); err != nil {
 			return nil, fmt.Errorf("validation failed: %w", err)
 		}
+	}
+
+	existing, _ := s.repo.GetActualVersion(ctx, serviceID)
+
+	nextVersion := 1
+	if existing != nil {
+		nextVersion = existing.Version + 1
 	}
 
 	config := &models.Config{
@@ -28,8 +28,8 @@ func (s *ConfigService) CreateConfig(ctx context.Context, serviceID string, data
 		Version:   nextVersion,
 	}
 
-	if err := s.repo.Create(ctx, config); err != nil {
-		return nil, err
+	if err := s.repo.CreateOrUpdate(ctx, config); err != nil {
+		return nil, fmt.Errorf("failed to save config: %w", err)
 	}
 
 	s.watcher.Notify(serviceID, &watcher.ConfigUpdate{

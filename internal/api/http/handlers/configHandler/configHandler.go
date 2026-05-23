@@ -14,6 +14,7 @@ type ConfigHandlerI interface {
 	GetConfigList(http.ResponseWriter, *http.Request)
 	GetActualConfig(http.ResponseWriter, *http.Request)
 	GetVersion(http.ResponseWriter, *http.Request)
+	Rollback(w http.ResponseWriter, r *http.Request)
 }
 
 func NewConfigHandler(cfgService cs.ConfigServiceI) ConfigHandlerI {

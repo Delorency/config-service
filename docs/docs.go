@@ -238,6 +238,72 @@ const docTemplate = `{
                 }
             }
         },
+        "/config/{service_id}/{version}/rollback": {
+            "post": {
+                "description": "Выполняет откат конфигурации сервиса к указанной версии. Создается новая версия с данными из целевой версии.\nВерсия автоматически инкрементируется. Watcher получит уведомление об изменении.",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "configs"
+                ],
+                "summary": "Откат конфигурации к указанной версии",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "example": "user-service",
+                        "description": "ID сервиса",
+                        "name": "service_id",
+                        "in": "path",
+                        "required": true
+                    },
+                    {
+                        "minimum": 1,
+                        "type": "integer",
+                        "example": 3,
+                        "description": "Номер версии для отката",
+                        "name": "version",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Успешный откат конфигурации",
+                        "schema": {
+                            "$ref": "#/definitions/configHandler.RollbackResponse"
+                        }
+                    },
+                    "400": {
+                        "description": "Невалидный запрос: отсутствует service_id или target_version",
+                        "schema": {
+                            "$ref": "#/definitions/configHandler.ErrorResponse"
+                        }
+                    },
+                    "404": {
+                        "description": "Сервис не найден или указанная версия не существует",
+                        "schema": {
+                            "$ref": "#/definitions/configHandler.ErrorResponse"
+                        }
+                    },
+                    "409": {
+                        "description": "Невозможно выполнить откат (например, уже на этой версии)",
+                        "schema": {
+                            "$ref": "#/definitions/configHandler.ErrorResponse"
+                        }
+                    },
+                    "500": {
+                        "description": "Внутренняя ошибка сервера",
+                        "schema": {
+                            "$ref": "#/definitions/configHandler.ErrorResponse"
+                        }
+                    }
+                }
+            }
+        },
         "/schema/{service_id}": {
             "get": {
                 "description": "Возвращает JSON-схему для указанного сервиса по его ID. Схема используется для валидации конфигураций сервиса.",
@@ -520,6 +586,31 @@ const docTemplate = `{
                 "error": {
                     "type": "string",
                     "example": "service_id is required"
+                }
+            }
+        },
+        "configHandler.RollbackResponse": {
+            "type": "object",
+            "properties": {
+                "message": {
+                    "type": "string",
+                    "example": "successfully rolled back"
+                },
+                "rolled_back_at": {
+                    "type": "string",
+                    "example": "2024-01-15T15:30:00Z"
+                },
+                "service_id": {
+                    "type": "string",
+                    "example": "user-service"
+                },
+                "target_version": {
+                    "type": "integer",
+                    "example": 3
+                },
+                "version": {
+                    "type": "integer",
+                    "example": 8
                 }
             }
         },

@@ -87,6 +87,24 @@ definitions:
         example: service_id is required
         type: string
     type: object
+  configHandler.RollbackResponse:
+    properties:
+      message:
+        example: successfully rolled back
+        type: string
+      rolled_back_at:
+        example: "2024-01-15T15:30:00Z"
+        type: string
+      service_id:
+        example: user-service
+        type: string
+      target_version:
+        example: 3
+        type: integer
+      version:
+        example: 8
+        type: integer
+    type: object
   schemaHandler.UploadSchemaResponse:
     properties:
       filename:
@@ -223,6 +241,53 @@ paths:
           schema:
             $ref: '#/definitions/configHandler.ErrorResponse'
       summary: Получение конкретной версии конфигурации
+      tags:
+      - configs
+  /config/{service_id}/{version}/rollback:
+    post:
+      consumes:
+      - application/json
+      description: |-
+        Выполняет откат конфигурации сервиса к указанной версии. Создается новая версия с данными из целевой версии.
+        Версия автоматически инкрементируется. Watcher получит уведомление об изменении.
+      parameters:
+      - description: ID сервиса
+        example: user-service
+        in: path
+        name: service_id
+        required: true
+        type: string
+      - description: Номер версии для отката
+        example: 3
+        in: path
+        minimum: 1
+        name: version
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Успешный откат конфигурации
+          schema:
+            $ref: '#/definitions/configHandler.RollbackResponse'
+        "400":
+          description: 'Невалидный запрос: отсутствует service_id или target_version'
+          schema:
+            $ref: '#/definitions/configHandler.ErrorResponse'
+        "404":
+          description: Сервис не найден или указанная версия не существует
+          schema:
+            $ref: '#/definitions/configHandler.ErrorResponse'
+        "409":
+          description: Невозможно выполнить откат (например, уже на этой версии)
+          schema:
+            $ref: '#/definitions/configHandler.ErrorResponse'
+        "500":
+          description: Внутренняя ошибка сервера
+          schema:
+            $ref: '#/definitions/configHandler.ErrorResponse'
+      summary: Откат конфигурации к указанной версии
       tags:
       - configs
   /config/{service_id}/actual:

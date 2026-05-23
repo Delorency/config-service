@@ -45,6 +45,7 @@ func NewRouter(logger *log.Logger, schemadir string,
 	router.Get("/config/{service_id}", configH.GetConfigList)
 	router.Get("/config/{service_id}/actual", configH.GetActualConfig)
 	router.Get("/config/{service_id}/{version}", configH.GetVersion)
+	router.Post("/config/{service_id}/{version}/rollback", configH.Rollback)
 
 	return router
 }
