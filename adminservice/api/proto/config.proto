@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+package config;
+
+option go_package = "main/api/proto"; 
+
+service ConfigService {
+  rpc GetConfig (GetRequest) returns (Config);
+  rpc Watch (WatchRequest) returns (stream Config);
+  
+  rpc CheckHealth (HealthRequest) returns (HealthResponse);
+}
+
+message GetRequest {
+  string service_id = 1;
+}
+
+message WatchRequest {
+  string service_id = 1;
+  int32 current_version = 2;
+}
+
+message Config {
+  string service_id = 1;
+  bytes data = 2;
+  int32 version = 3;
+}
+
+message HealthRequest {}
+
+message HealthResponse {
+  string status = 1;
+}

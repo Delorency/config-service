@@ -1,0 +1,21 @@
+2026/05/23 16:05:07 gRPC server listening on localhost:8081
+2026/05/23 16:10:21 [gRPC] Method: /config.ConfigService/CheckHealth, Duration: 1.025µs, Success
+2026/05/23 16:10:21 [gRPC] Method: /config.ConfigService/GetConfig, Duration: 380.063µs, Error: rpc error: code = NotFound desc = config not found for service: test-service
+2026/05/23 16:10:37 [gRPC Stream] Method: /config.ConfigService/Watch, Duration: 15.795758223s, Success
+2026/05/23 16:10:54 [gRPC] Method: /config.ConfigService/CheckHealth, Duration: 2.502µs, Success
+2026/05/23 16:10:54 [gRPC] Method: /config.ConfigService/GetConfig, Duration: 775.45µs, Success
+2026/05/23 16:11:15 [gRPC Stream] Method: /config.ConfigService/Watch, Duration: 20.060772979s, Success
+2026/05/23 16:11:29 [gRPC] Method: /config.ConfigService/CheckHealth, Duration: 1.404µs, Success
+2026/05/23 16:11:29 [gRPC] Method: /config.ConfigService/GetConfig, Duration: 388.298µs, Success
+2026/05/23 16:13:04 [gRPC Stream] Method: /config.ConfigService/Watch, Duration: 1m35.060579914s, Success
+2026/05/23 16:13:06 [gRPC] Method: /config.ConfigService/CheckHealth, Duration: 1.476µs, Success
+2026/05/23 16:13:06 [gRPC] Method: /config.ConfigService/GetConfig, Duration: 371.07µs, Success
+2026/05/23 16:13:07 [gRPC Stream] Method: /config.ConfigService/Watch, Duration: 892.597705ms, Success
+2026/05/23 16:14:43 [gRPC] Method: /config.ConfigService/CheckHealth, Duration: 2.52µs, Success
+2026/05/23 16:14:43 [gRPC] Method: /config.ConfigService/GetConfig, Duration: 979.311µs, Success
+2026/05/23 16:16:45 [gRPC Stream] Method: /config.ConfigService/Watch, Duration: 2m1.534100838s, Success
+2026/05/23 17:36:59 gRPC server: starting graceful shutdown...
+2026/05/23 17:36:59 Stopping watcher manager...
+2026/05/23 17:36:59 gRPC server: graceful shutdown completed
+2026/05/23 17:36:59 Serve goroutine stopped
+2026/05/23 17:36:59 gRPC server: stopped

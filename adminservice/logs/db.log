@@ -1,0 +1,756 @@
+
+2026/03/22 23:23:24 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:402
+[2.505ms] [rows:1] SELECT count(*) FROM information_schema.tables WHERE table_schema = CURRENT_SCHEMA() AND table_name = 'migrations' AND table_type = 'BASE TABLE'
+
+2026/03/22 23:23:24 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:413
+[0.415ms] [rows:1] SELECT count(*) FROM "migrations" WHERE id = '20260321_create_table'
+
+2026/03/22 23:30:40 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:402
+[2.632ms] [rows:1] SELECT count(*) FROM information_schema.tables WHERE table_schema = CURRENT_SCHEMA() AND table_name = 'migrations' AND table_type = 'BASE TABLE'
+
+2026/03/22 23:30:40 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:413
+[0.447ms] [rows:1] SELECT count(*) FROM "migrations" WHERE id = '20260321_create_table'
+
+2026/03/22 23:40:51 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:402
+[2.553ms] [rows:1] SELECT count(*) FROM information_schema.tables WHERE table_schema = CURRENT_SCHEMA() AND table_name = 'migrations' AND table_type = 'BASE TABLE'
+
+2026/03/22 23:40:51 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:413
+[0.404ms] [rows:1] SELECT count(*) FROM "migrations" WHERE id = '20260321_create_table'
+
+2026/03/22 23:41:55 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:402
+[2.662ms] [rows:1] SELECT count(*) FROM information_schema.tables WHERE table_schema = CURRENT_SCHEMA() AND table_name = 'migrations' AND table_type = 'BASE TABLE'
+
+2026/03/22 23:41:55 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:413
+[0.420ms] [rows:1] SELECT count(*) FROM "migrations" WHERE id = '20260321_create_table'
+
+2026/03/22 23:42:23 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:402
+[3.117ms] [rows:1] SELECT count(*) FROM information_schema.tables WHERE table_schema = CURRENT_SCHEMA() AND table_name = 'migrations' AND table_type = 'BASE TABLE'
+
+2026/03/22 23:42:23 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:413
+[0.477ms] [rows:1] SELECT count(*) FROM "migrations" WHERE id = '20260321_create_table'
+
+2026/03/22 23:44:15 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:402
+[2.428ms] [rows:1] SELECT count(*) FROM information_schema.tables WHERE table_schema = CURRENT_SCHEMA() AND table_name = 'migrations' AND table_type = 'BASE TABLE'
+
+2026/03/22 23:44:15 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:413
+[0.430ms] [rows:1] SELECT count(*) FROM "migrations" WHERE id = '20260321_create_table'
+
+2026/03/22 23:44:49 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:402
+[4.725ms] [rows:1] SELECT count(*) FROM information_schema.tables WHERE table_schema = CURRENT_SCHEMA() AND table_name = 'migrations' AND table_type = 'BASE TABLE'
+
+2026/03/22 23:44:49 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:413
+[0.525ms] [rows:1] SELECT count(*) FROM "migrations" WHERE id = '20260321_create_table'
+
+2026/03/22 23:57:15 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:402
+[2.524ms] [rows:1] SELECT count(*) FROM information_schema.tables WHERE table_schema = CURRENT_SCHEMA() AND table_name = 'migrations' AND table_type = 'BASE TABLE'
+
+2026/03/22 23:57:15 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:413
+[0.485ms] [rows:1] SELECT count(*) FROM "migrations" WHERE id = '20260321_create_table'
+
+2026/03/22 23:59:26 /home/delorency/work/config-service/internal/repo/repo.go:24 record not found
+[3.590ms] [rows:0] SELECT * FROM "config" WHERE service_id = 'auth1' AND "config"."deleted_at" IS NULL ORDER BY "config"."id" LIMIT 1
+
+2026/03/23 00:00:03 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:402
+[2.598ms] [rows:1] SELECT count(*) FROM information_schema.tables WHERE table_schema = CURRENT_SCHEMA() AND table_name = 'migrations' AND table_type = 'BASE TABLE'
+
+2026/03/23 00:00:03 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:413
+[0.442ms] [rows:1] SELECT count(*) FROM "migrations" WHERE id = '20260321_create_table'
+
+2026/03/23 00:00:06 /home/delorency/work/config-service/internal/repo/repo.go:24 record not found
+[0.961ms] [rows:0] SELECT * FROM "config" WHERE service_id = 'auth1' AND "config"."deleted_at" IS NULL ORDER BY "config"."id" LIMIT 1
+
+2026/03/23 00:00:18 /home/delorency/work/config-service/internal/repo/repo.go:24 record not found
+[0.583ms] [rows:0] SELECT * FROM "config" WHERE service_id = 'auth' AND "config"."deleted_at" IS NULL ORDER BY "config"."id" LIMIT 1
+
+2026/03/23 00:04:00 /home/delorency/work/config-service/internal/repo/repo.go:24 record not found
+[0.461ms] [rows:0] SELECT * FROM "config" WHERE service_id = 'auth' AND "config"."deleted_at" IS NULL ORDER BY "config"."id" LIMIT 1
+
+2026/03/23 00:05:06 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:402
+[2.542ms] [rows:1] SELECT count(*) FROM information_schema.tables WHERE table_schema = CURRENT_SCHEMA() AND table_name = 'migrations' AND table_type = 'BASE TABLE'
+
+2026/03/23 00:05:06 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:413
+[0.376ms] [rows:1] SELECT count(*) FROM "migrations" WHERE id = '20260321_create_table'
+
+2026/03/23 00:05:07 /home/delorency/work/config-service/internal/repo/repo.go:24 record not found
+[1.210ms] [rows:0] SELECT * FROM "config" WHERE service_id = 'auth' AND "config"."deleted_at" IS NULL ORDER BY "config"."id" LIMIT 1
+
+2026/05/22 23:16:37 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:402
+[16.709ms] [rows:1] SELECT count(*) FROM information_schema.tables WHERE table_schema = CURRENT_SCHEMA() AND table_name = 'migrations' AND table_type = 'BASE TABLE'
+
+2026/05/22 23:16:37 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:413
+[1.089ms] [rows:1] SELECT count(*) FROM "migrations" WHERE id = '20260321_create_table'
+
+2026/05/22 23:19:48 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:402
+[2.443ms] [rows:1] SELECT count(*) FROM information_schema.tables WHERE table_schema = CURRENT_SCHEMA() AND table_name = 'migrations' AND table_type = 'BASE TABLE'
+
+2026/05/22 23:19:48 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:413
+[0.362ms] [rows:1] SELECT count(*) FROM "migrations" WHERE id = '20260321_create_table'
+
+2026/05/22 23:28:20 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:402
+[2.521ms] [rows:1] SELECT count(*) FROM information_schema.tables WHERE table_schema = CURRENT_SCHEMA() AND table_name = 'migrations' AND table_type = 'BASE TABLE'
+
+2026/05/22 23:28:20 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:413
+[0.401ms] [rows:1] SELECT count(*) FROM "migrations" WHERE id = '20260321_create_table'
+
+2026/05/22 23:39:52 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:402
+[2.565ms] [rows:1] SELECT count(*) FROM information_schema.tables WHERE table_schema = CURRENT_SCHEMA() AND table_name = 'migrations' AND table_type = 'BASE TABLE'
+
+2026/05/22 23:39:52 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:413
+[0.422ms] [rows:1] SELECT count(*) FROM "migrations" WHERE id = '20260321_create_table'
+
+2026/05/22 23:56:17 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:402
+[13.665ms] [rows:1] SELECT count(*) FROM information_schema.tables WHERE table_schema = CURRENT_SCHEMA() AND table_name = 'migrations' AND table_type = 'BASE TABLE'
+
+2026/05/22 23:56:17 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:413
+[0.817ms] [rows:1] SELECT count(*) FROM "migrations" WHERE id = '20260321_create_table'
+
+2026/05/23 00:12:37 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:402
+[14.552ms] [rows:1] SELECT count(*) FROM information_schema.tables WHERE table_schema = CURRENT_SCHEMA() AND table_name = 'migrations' AND table_type = 'BASE TABLE'
+
+2026/05/23 00:12:37 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:413
+[0.864ms] [rows:1] SELECT count(*) FROM "migrations" WHERE id = '20260321_create_table'
+
+2026/05/23 01:18:00 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:402
+[3.585ms] [rows:1] SELECT count(*) FROM information_schema.tables WHERE table_schema = CURRENT_SCHEMA() AND table_name = 'migrations' AND table_type = 'BASE TABLE'
+
+2026/05/23 01:18:00 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:413
+[0.709ms] [rows:1] SELECT count(*) FROM "migrations" WHERE id = '20260321_create_table'
+
+2026/05/23 01:20:42 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:402
+[2.435ms] [rows:1] SELECT count(*) FROM information_schema.tables WHERE table_schema = CURRENT_SCHEMA() AND table_name = 'migrations' AND table_type = 'BASE TABLE'
+
+2026/05/23 01:20:42 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:413
+[0.551ms] [rows:1] SELECT count(*) FROM "migrations" WHERE id = '20260321_create_table'
+
+2026/05/23 01:22:29 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:402
+[3.003ms] [rows:1] SELECT count(*) FROM information_schema.tables WHERE table_schema = CURRENT_SCHEMA() AND table_name = 'migrations' AND table_type = 'BASE TABLE'
+
+2026/05/23 01:22:29 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:413
+[0.518ms] [rows:1] SELECT count(*) FROM "migrations" WHERE id = '20260321_create_table'
+
+2026/05/23 01:24:39 /home/delorency/work/config-service/internal/repo/repo.go:25 ОШИБКА: столбец "createdat" не существует (SQLSTATE 42703)
+[4.967ms] [rows:0] SELECT * FROM "config" WHERE service_id = 'afsfd' AND "config"."deleted_at" IS NULL ORDER BY CreatedAt DESC,"config"."id" LIMIT 1
+
+2026/05/23 01:29:16 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:402
+[2.712ms] [rows:1] SELECT count(*) FROM information_schema.tables WHERE table_schema = CURRENT_SCHEMA() AND table_name = 'migrations' AND table_type = 'BASE TABLE'
+
+2026/05/23 01:29:16 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:413
+[0.594ms] [rows:1] SELECT count(*) FROM "migrations" WHERE id = '20260321_create_table'
+
+2026/05/23 01:30:25 /home/delorency/work/config-service/internal/repo/repo.go:25 ОШИБКА: столбец "createdat" не существует (SQLSTATE 42703)
+[0.673ms] [rows:0] SELECT * FROM "config" WHERE service_id = 'fdsf' AND "config"."deleted_at" IS NULL ORDER BY CreatedAt DESC,"config"."id" LIMIT 1
+
+2026/05/23 01:32:01 /home/delorency/work/config-service/internal/repo/repo.go:25 ОШИБКА: столбец "createdat" не существует (SQLSTATE 42703)
+[0.361ms] [rows:0] SELECT * FROM "config" WHERE service_id = 'fdsf' AND "config"."deleted_at" IS NULL ORDER BY CreatedAt DESC,"config"."id" LIMIT 1
+
+2026/05/23 01:32:08 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:402
+[2.510ms] [rows:1] SELECT count(*) FROM information_schema.tables WHERE table_schema = CURRENT_SCHEMA() AND table_name = 'migrations' AND table_type = 'BASE TABLE'
+
+2026/05/23 01:32:08 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:413
+[0.349ms] [rows:1] SELECT count(*) FROM "migrations" WHERE id = '20260321_create_table'
+
+2026/05/23 01:32:13 /home/delorency/work/config-service/internal/repo/repo.go:25 ОШИБКА: столбец "createdat" не существует (SQLSTATE 42703)
+[0.839ms] [rows:0] SELECT * FROM "config" WHERE service_id = 'sdfsdfsd' AND "config"."deleted_at" IS NULL ORDER BY CreatedAt DESC,"config"."id" LIMIT 1
+
+2026/05/23 01:32:41 /home/delorency/work/config-service/internal/repo/repo.go:25 ОШИБКА: столбец "createdat" не существует (SQLSTATE 42703)
+[0.405ms] [rows:0] SELECT * FROM "config" WHERE service_id = 'sdfsdfsd' AND "config"."deleted_at" IS NULL ORDER BY CreatedAt DESC,"config"."id" LIMIT 1
+
+2026/05/23 01:32:45 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:402
+[3.179ms] [rows:1] SELECT count(*) FROM information_schema.tables WHERE table_schema = CURRENT_SCHEMA() AND table_name = 'migrations' AND table_type = 'BASE TABLE'
+
+2026/05/23 01:32:45 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:413
+[0.414ms] [rows:1] SELECT count(*) FROM "migrations" WHERE id = '20260321_create_table'
+
+2026/05/23 01:32:47 /home/delorency/work/config-service/internal/repo/repo.go:25 ОШИБКА: столбец "createdat" не существует (SQLSTATE 42703)
+[0.787ms] [rows:0] SELECT * FROM "config" WHERE service_id = 'sdfsdfsd' AND "config"."deleted_at" IS NULL ORDER BY CreatedAt DESC,"config"."id" LIMIT 1
+
+2026/05/23 01:33:11 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:402
+[2.641ms] [rows:1] SELECT count(*) FROM information_schema.tables WHERE table_schema = CURRENT_SCHEMA() AND table_name = 'migrations' AND table_type = 'BASE TABLE'
+
+2026/05/23 01:33:11 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:413
+[0.410ms] [rows:1] SELECT count(*) FROM "migrations" WHERE id = '20260321_create_table'
+
+2026/05/23 01:33:12 /home/delorency/work/config-service/internal/repo/repo.go:25 ОШИБКА: столбец "createdat" не существует (SQLSTATE 42703)
+[1.235ms] [rows:0] SELECT * FROM "config" WHERE service_id = 'sdfsdfsd' AND "config"."deleted_at" IS NULL ORDER BY CreatedAt DESC,"config"."id" LIMIT 1
+
+2026/05/23 01:33:13 /home/delorency/work/config-service/internal/repo/repo.go:25 ОШИБКА: столбец "createdat" не существует (SQLSTATE 42703)
+[0.355ms] [rows:0] SELECT * FROM "config" WHERE service_id = 'sdfsdfsd' AND "config"."deleted_at" IS NULL ORDER BY CreatedAt DESC,"config"."id" LIMIT 1
+
+2026/05/23 01:33:17 /home/delorency/work/config-service/internal/repo/repo.go:25 ОШИБКА: столбец "createdat" не существует (SQLSTATE 42703)
+[0.372ms] [rows:0] SELECT * FROM "config" WHERE service_id = 'sdfsdfsd' AND "config"."deleted_at" IS NULL ORDER BY CreatedAt DESC,"config"."id" LIMIT 1
+
+2026/05/23 01:34:22 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:402
+[2.932ms] [rows:1] SELECT count(*) FROM information_schema.tables WHERE table_schema = CURRENT_SCHEMA() AND table_name = 'migrations' AND table_type = 'BASE TABLE'
+
+2026/05/23 01:34:22 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:413
+[0.600ms] [rows:1] SELECT count(*) FROM "migrations" WHERE id = '20260321_create_table'
+
+2026/05/23 01:34:25 /home/delorency/work/config-service/internal/repo/repo.go:25 record not found
+[4.029ms] [rows:0] SELECT * FROM "config" WHERE service_id = 'sdfsdfsd' AND "config"."deleted_at" IS NULL ORDER BY created_at DESC,"config"."id" LIMIT 1
+
+2026/05/23 01:34:32 /home/delorency/work/config-service/internal/repo/repo.go:25 record not found
+[0.594ms] [rows:0] SELECT * FROM "config" WHERE service_id = 'auth-service' AND "config"."deleted_at" IS NULL ORDER BY created_at DESC,"config"."id" LIMIT 1
+
+2026/05/23 01:36:53 /home/delorency/work/config-service/internal/repo/repo.go:25 record not found
+[0.473ms] [rows:0] SELECT * FROM "config" WHERE service_id = 'auth-service' AND "config"."deleted_at" IS NULL ORDER BY created_at DESC,"config"."id" LIMIT 1
+
+2026/05/23 01:37:01 /home/delorency/work/config-service/internal/repo/repo.go:25 record not found
+[0.549ms] [rows:0] SELECT * FROM "config" WHERE service_id = 'auth-service' AND "config"."deleted_at" IS NULL ORDER BY created_at DESC,"config"."id" LIMIT 1
+
+2026/05/23 01:39:59 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:402
+[2.513ms] [rows:1] SELECT count(*) FROM information_schema.tables WHERE table_schema = CURRENT_SCHEMA() AND table_name = 'migrations' AND table_type = 'BASE TABLE'
+
+2026/05/23 01:39:59 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:413
+[0.394ms] [rows:1] SELECT count(*) FROM "migrations" WHERE id = '20260321_create_table'
+
+2026/05/23 01:40:09 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:402
+[2.631ms] [rows:1] SELECT count(*) FROM information_schema.tables WHERE table_schema = CURRENT_SCHEMA() AND table_name = 'migrations' AND table_type = 'BASE TABLE'
+
+2026/05/23 01:40:09 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:413
+[0.429ms] [rows:1] SELECT count(*) FROM "migrations" WHERE id = '20260321_create_table'
+
+2026/05/23 01:41:26 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:402
+[2.573ms] [rows:1] SELECT count(*) FROM information_schema.tables WHERE table_schema = CURRENT_SCHEMA() AND table_name = 'migrations' AND table_type = 'BASE TABLE'
+
+2026/05/23 01:41:26 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:413
+[0.359ms] [rows:1] SELECT count(*) FROM "migrations" WHERE id = '20260321_create_table'
+
+2026/05/23 01:41:33 /home/delorency/work/config-service/internal/repo/repo.go:25 record not found
+[1.325ms] [rows:0] SELECT * FROM "config" WHERE service_id = 'auth' AND "config"."deleted_at" IS NULL ORDER BY created_at DESC,"config"."id" LIMIT 1
+
+2026/05/23 01:41:33 /home/delorency/work/config-service/internal/repo/repo.go:66
+[3.872ms] [rows:1] INSERT INTO "config" ("created_at","updated_at","deleted_at","service_id","data","version") VALUES ('2026-05-23 01:41:33.541','2026-05-23 01:41:33.541',NULL,'auth','{
+  "jwt_secret": "short",
+  "token_ttl": 3600,
+  "refresh_ttl": 86400,
+  "session_store": "redis"
+}',1) RETURNING "id"
+
+2026/05/23 01:41:33 /home/delorency/work/config-service/internal/repo/repo.go:76
+[1.216ms] [rows:1] INSERT INTO "config_history" ("service_id","data","version","created_at") VALUES ('auth','{
+  "jwt_secret": "short",
+  "token_ttl": 3600,
+  "refresh_ttl": 86400,
+  "session_store": "redis"
+}',1,'2026-05-23 01:41:33.545') RETURNING "id"
+
+2026/05/23 02:00:55 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:402
+[2.603ms] [rows:1] SELECT count(*) FROM information_schema.tables WHERE table_schema = CURRENT_SCHEMA() AND table_name = 'migrations' AND table_type = 'BASE TABLE'
+
+2026/05/23 02:00:55 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:413
+[0.523ms] [rows:1] SELECT count(*) FROM "migrations" WHERE id = '20260321_create_table'
+
+2026/05/23 02:00:58 /home/delorency/work/config-service/internal/repo/repo.go:25
+[1.598ms] [rows:1] SELECT * FROM "config" WHERE service_id = 'auth' AND "config"."deleted_at" IS NULL ORDER BY created_at DESC,"config"."id" LIMIT 1
+
+2026/05/23 02:01:13 /home/delorency/work/config-service/internal/repo/repo.go:25 record not found
+[0.413ms] [rows:0] SELECT * FROM "config" WHERE service_id = 'auth-service' AND "config"."deleted_at" IS NULL ORDER BY created_at DESC,"config"."id" LIMIT 1
+
+2026/05/23 02:02:03 /home/delorency/work/config-service/internal/repo/repo.go:25 record not found
+[0.759ms] [rows:0] SELECT * FROM "config" WHERE service_id = 'auth-service' AND "config"."deleted_at" IS NULL ORDER BY created_at DESC,"config"."id" LIMIT 1
+
+2026/05/23 02:02:03 /home/delorency/work/config-service/internal/repo/repo.go:66
+[0.973ms] [rows:1] INSERT INTO "config" ("created_at","updated_at","deleted_at","service_id","data","version") VALUES ('2026-05-23 02:02:03.556','2026-05-23 02:02:03.556',NULL,'auth-service','{
+  "jwt_secret": "prod-jwt-secret-key-32-chars-long",
+  "token_ttl": 7200,
+  "refresh_ttl": 172800,
+  "session_store": "redis"
+}',1) RETURNING "id"
+
+2026/05/23 02:02:03 /home/delorency/work/config-service/internal/repo/repo.go:76
+[1.222ms] [rows:1] INSERT INTO "config_history" ("service_id","data","version","created_at") VALUES ('auth-service','{
+  "jwt_secret": "prod-jwt-secret-key-32-chars-long",
+  "token_ttl": 7200,
+  "refresh_ttl": 172800,
+  "session_store": "redis"
+}',1,'2026-05-23 02:02:03.557') RETURNING "id"
+
+2026/05/23 02:12:16 /home/delorency/work/config-service/internal/repo/repo.go:25
+[0.500ms] [rows:1] SELECT * FROM "config" WHERE service_id = 'auth-service' AND "config"."deleted_at" IS NULL ORDER BY created_at DESC,"config"."id" LIMIT 1
+
+2026/05/23 02:12:16 /home/delorency/work/config-service/internal/repo/repo.go:51
+[0.697ms] [rows:1] SELECT count(*) FROM "config_history" WHERE service_id = 'auth-service'
+
+2026/05/23 02:12:16 /home/delorency/work/config-service/internal/repo/repo.go:59
+[0.368ms] [rows:1] SELECT * FROM "config_history" WHERE service_id = 'auth-service' ORDER BY version DESC LIMIT 50
+
+2026/05/23 02:13:12 /home/delorency/work/config-service/internal/repo/repo.go:25
+[0.440ms] [rows:1] SELECT * FROM "config" WHERE service_id = 'auth-service' AND "config"."deleted_at" IS NULL ORDER BY created_at DESC,"config"."id" LIMIT 1
+
+2026/05/23 02:13:48 /home/delorency/work/config-service/internal/repo/repo.go:37 record not found
+[2.838ms] [rows:0] SELECT * FROM "config_history" WHERE service_id = 'auth-service' AND version = 3 ORDER BY "config_history"."id" LIMIT 1
+
+2026/05/23 02:13:52 /home/delorency/work/config-service/internal/repo/repo.go:37
+[0.513ms] [rows:1] SELECT * FROM "config_history" WHERE service_id = 'auth-service' AND version = 1 ORDER BY "config_history"."id" LIMIT 1
+
+2026/05/23 02:13:54 /home/delorency/work/config-service/internal/repo/repo.go:37 record not found
+[0.355ms] [rows:0] SELECT * FROM "config_history" WHERE service_id = 'auth-servicee' AND version = 1 ORDER BY "config_history"."id" LIMIT 1
+
+2026/05/23 02:14:00 /home/delorency/work/config-service/internal/repo/repo.go:37 record not found
+[0.452ms] [rows:0] SELECT * FROM "config_history" WHERE service_id = 'auth-servicee' AND version = 45 ORDER BY "config_history"."id" LIMIT 1
+
+2026/05/23 02:14:01 /home/delorency/work/config-service/internal/repo/repo.go:37 record not found
+[0.376ms] [rows:0] SELECT * FROM "config_history" WHERE service_id = 'auth-servicee' AND version = 45 ORDER BY "config_history"."id" LIMIT 1
+
+2026/05/23 02:14:13 /home/delorency/work/config-service/internal/repo/repo.go:25
+[0.422ms] [rows:1] SELECT * FROM "config" WHERE service_id = 'auth-service' AND "config"."deleted_at" IS NULL ORDER BY created_at DESC,"config"."id" LIMIT 1
+
+2026/05/23 02:14:13 /home/delorency/work/config-service/internal/repo/repo.go:66 ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности "idx_config_service_id" (SQLSTATE 23505)
+[0.389ms] [rows:0] INSERT INTO "config" ("created_at","updated_at","deleted_at","service_id","data","version") VALUES ('2026-05-23 02:14:13.12','2026-05-23 02:14:13.12',NULL,'auth-service','{
+  "jwt_secret": "prod-jwt-secret-key-32-chars-long",
+  "token_ttl": 7200,
+  "refresh_ttl": 172800,
+  "session_store": "redis"
+}',2) RETURNING "id"
+
+2026/05/23 02:17:23 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:402
+[2.441ms] [rows:1] SELECT count(*) FROM information_schema.tables WHERE table_schema = CURRENT_SCHEMA() AND table_name = 'migrations' AND table_type = 'BASE TABLE'
+
+2026/05/23 02:17:23 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:413
+[0.389ms] [rows:1] SELECT count(*) FROM "migrations" WHERE id = '20260321_create_table'
+
+2026/05/23 02:24:37 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:402
+[3.779ms] [rows:1] SELECT count(*) FROM information_schema.tables WHERE table_schema = CURRENT_SCHEMA() AND table_name = 'migrations' AND table_type = 'BASE TABLE'
+
+2026/05/23 02:24:37 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:413
+[0.504ms] [rows:1] SELECT count(*) FROM "migrations" WHERE id = '20260321_create_table'
+
+2026/05/23 02:48:50 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:402
+[2.849ms] [rows:1] SELECT count(*) FROM information_schema.tables WHERE table_schema = CURRENT_SCHEMA() AND table_name = 'migrations' AND table_type = 'BASE TABLE'
+
+2026/05/23 02:48:50 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:413
+[0.569ms] [rows:1] SELECT count(*) FROM "migrations" WHERE id = '20260321_create_table'
+
+2026/05/23 02:50:23 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:402
+[2.495ms] [rows:1] SELECT count(*) FROM information_schema.tables WHERE table_schema = CURRENT_SCHEMA() AND table_name = 'migrations' AND table_type = 'BASE TABLE'
+
+2026/05/23 02:50:23 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:413
+[0.403ms] [rows:1] SELECT count(*) FROM "migrations" WHERE id = '20260321_create_table'
+
+2026/05/23 02:50:37 /home/delorency/work/config-service/internal/repo/repo.go:26
+[1.294ms] [rows:1] SELECT * FROM "config" WHERE service_id = 'auth-service' AND "config"."deleted_at" IS NULL ORDER BY created_at DESC,"config"."id" LIMIT 1
+
+2026/05/23 02:50:37 /home/delorency/work/config-service/internal/repo/repo.go:52
+[0.527ms] [rows:1] SELECT count(*) FROM "config_history" WHERE service_id = 'auth-service'
+
+2026/05/23 02:50:37 /home/delorency/work/config-service/internal/repo/repo.go:60
+[0.323ms] [rows:1] SELECT * FROM "config_history" WHERE service_id = 'auth-service' ORDER BY version DESC LIMIT 50
+
+2026/05/23 02:50:56 /home/delorency/work/config-service/internal/repo/repo.go:38 record not found
+[0.566ms] [rows:0] SELECT * FROM "config_history" WHERE service_id = 'auth-service' AND version = 2 ORDER BY "config_history"."id" LIMIT 1
+
+2026/05/23 02:50:59 /home/delorency/work/config-service/internal/repo/repo.go:38
+[0.474ms] [rows:1] SELECT * FROM "config_history" WHERE service_id = 'auth-service' AND version = 1 ORDER BY "config_history"."id" LIMIT 1
+
+2026/05/23 02:51:10 /home/delorency/work/config-service/internal/repo/repo.go:26
+[0.416ms] [rows:1] SELECT * FROM "config" WHERE service_id = 'auth-service' AND "config"."deleted_at" IS NULL ORDER BY created_at DESC,"config"."id" LIMIT 1
+
+2026/05/23 02:52:17 /home/delorency/work/config-service/internal/repo/repo.go:26
+[0.411ms] [rows:1] SELECT * FROM "config" WHERE service_id = 'auth-service' AND "config"."deleted_at" IS NULL ORDER BY created_at DESC,"config"."id" LIMIT 1
+
+2026/05/23 02:52:51 /home/delorency/work/config-service/internal/repo/repo.go:26
+[0.516ms] [rows:1] SELECT * FROM "config" WHERE service_id = 'auth-service' AND "config"."deleted_at" IS NULL ORDER BY created_at DESC,"config"."id" LIMIT 1
+
+2026/05/23 02:52:51 /home/delorency/work/config-service/internal/repo/repo.go:52
+[0.243ms] [rows:1] SELECT count(*) FROM "config_history" WHERE service_id = 'auth-service'
+
+2026/05/23 02:52:51 /home/delorency/work/config-service/internal/repo/repo.go:60
+[0.217ms] [rows:1] SELECT * FROM "config_history" WHERE service_id = 'auth-service' ORDER BY version DESC LIMIT 50
+
+2026/05/23 02:53:15 /home/delorency/work/config-service/internal/repo/repo.go:26
+[0.442ms] [rows:1] SELECT * FROM "config" WHERE service_id = 'auth-service' AND "config"."deleted_at" IS NULL ORDER BY created_at DESC,"config"."id" LIMIT 1
+
+2026/05/23 02:53:15 /home/delorency/work/config-service/internal/repo/repo.go:52
+[0.191ms] [rows:1] SELECT count(*) FROM "config_history" WHERE service_id = 'auth-service'
+
+2026/05/23 02:53:15 /home/delorency/work/config-service/internal/repo/repo.go:60
+[0.219ms] [rows:1] SELECT * FROM "config_history" WHERE service_id = 'auth-service' ORDER BY version DESC LIMIT 10
+
+2026/05/23 02:53:47 /home/delorency/work/config-service/internal/repo/repo.go:26
+[0.438ms] [rows:1] SELECT * FROM "config" WHERE service_id = 'auth-service' AND "config"."deleted_at" IS NULL ORDER BY created_at DESC,"config"."id" LIMIT 1
+
+2026/05/23 02:53:47 /home/delorency/work/config-service/internal/repo/repo.go:67 ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности "idx_config_service_id" (SQLSTATE 23505)
+[4.868ms] [rows:0] INSERT INTO "config" ("created_at","updated_at","deleted_at","service_id","data","version") VALUES ('2026-05-23 02:53:47.762','2026-05-23 02:53:47.762',NULL,'auth-service','{
+  "jwt_secret": "prod-jwt-secret-key-32-chars-long",
+  "token_ttl": 7200,
+  "refresh_ttl": 172800,
+  "session_store": "memory"
+}',2) RETURNING "id"
+
+2026/05/23 03:00:45 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:402
+[2.832ms] [rows:1] SELECT count(*) FROM information_schema.tables WHERE table_schema = CURRENT_SCHEMA() AND table_name = 'migrations' AND table_type = 'BASE TABLE'
+
+2026/05/23 03:00:45 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:413
+[0.557ms] [rows:1] SELECT count(*) FROM "migrations" WHERE id = '20260321_create_table'
+
+2026/05/23 03:00:49 /home/delorency/work/config-service/internal/repo/repo.go:26
+[1.248ms] [rows:1] SELECT * FROM "config" WHERE service_id = 'auth-service' AND "config"."deleted_at" IS NULL ORDER BY created_at DESC,"config"."id" LIMIT 1
+
+2026/05/23 03:00:49 /home/delorency/work/config-service/internal/repo/repo.go:114
+[1.092ms] [rows:1] SELECT * FROM "config" WHERE service_id = 'auth-service' AND "config"."deleted_at" IS NULL ORDER BY "config"."id" LIMIT 1
+
+2026/05/23 03:00:49 /home/delorency/work/config-service/internal/repo/repo.go:125
+[0.513ms] [rows:1] UPDATE "config" SET "data"='{
+  "jwt_secret": "prod-jwt-secret-key-32-chars-long",
+  "token_ttl": 7200,
+  "refresh_ttl": 172800,
+  "session_store": "memory"
+}',"updated_at"='2026-05-23 03:00:49.358',"version"=2 WHERE service_id = 'auth-service' AND "config"."deleted_at" IS NULL
+
+2026/05/23 03:00:49 /home/delorency/work/config-service/internal/repo/repo.go:140
+[0.612ms] [rows:1] INSERT INTO "config_history" ("service_id","data","version","created_at") VALUES ('auth-service','{
+  "jwt_secret": "prod-jwt-secret-key-32-chars-long",
+  "token_ttl": 7200,
+  "refresh_ttl": 172800,
+  "session_store": "memory"
+}',2,'2026-05-23 03:00:49.358') RETURNING "id"
+
+2026/05/23 03:01:17 /home/delorency/work/config-service/internal/repo/repo.go:26
+[0.408ms] [rows:1] SELECT * FROM "config" WHERE service_id = 'auth-service' AND "config"."deleted_at" IS NULL ORDER BY created_at DESC,"config"."id" LIMIT 1
+
+2026/05/23 03:01:17 /home/delorency/work/config-service/internal/repo/repo.go:52
+[0.452ms] [rows:1] SELECT count(*) FROM "config_history" WHERE service_id = 'auth-service'
+
+2026/05/23 03:01:17 /home/delorency/work/config-service/internal/repo/repo.go:60
+[0.454ms] [rows:2] SELECT * FROM "config_history" WHERE service_id = 'auth-service' ORDER BY version DESC LIMIT 10
+
+2026/05/23 03:02:55 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:402
+[2.457ms] [rows:1] SELECT count(*) FROM information_schema.tables WHERE table_schema = CURRENT_SCHEMA() AND table_name = 'migrations' AND table_type = 'BASE TABLE'
+
+2026/05/23 03:02:55 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:413
+[0.365ms] [rows:1] SELECT count(*) FROM "migrations" WHERE id = '20260321_create_table'
+
+2026/05/23 03:03:19 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:402
+[2.843ms] [rows:1] SELECT count(*) FROM information_schema.tables WHERE table_schema = CURRENT_SCHEMA() AND table_name = 'migrations' AND table_type = 'BASE TABLE'
+
+2026/05/23 03:03:19 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:413
+[0.458ms] [rows:1] SELECT count(*) FROM "migrations" WHERE id = '20260321_create_table'
+
+2026/05/23 03:04:03 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:402
+[2.632ms] [rows:1] SELECT count(*) FROM information_schema.tables WHERE table_schema = CURRENT_SCHEMA() AND table_name = 'migrations' AND table_type = 'BASE TABLE'
+
+2026/05/23 03:04:03 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:413
+[0.447ms] [rows:1] SELECT count(*) FROM "migrations" WHERE id = '20260321_create_table'
+
+2026/05/23 03:04:15 /home/delorency/work/config-service/internal/repo/repo.go:38
+[1.332ms] [rows:1] SELECT * FROM "config_history" WHERE service_id = 'auth-service' AND version = 1 ORDER BY "config_history"."id" LIMIT 1
+
+2026/05/23 03:04:15 /home/delorency/work/config-service/internal/repo/repo.go:154
+[0.284ms] [rows:1] SELECT * FROM "config_history" WHERE service_id = 'auth-service' AND version = 1 ORDER BY "config_history"."id" LIMIT 1
+
+2026/05/23 03:04:15 /home/delorency/work/config-service/internal/repo/repo.go:162
+[0.715ms] [rows:1] SELECT * FROM "config" WHERE service_id = 'auth-service' AND "config"."deleted_at" IS NULL ORDER BY "config"."id" LIMIT 1
+
+2026/05/23 03:04:15 /home/delorency/work/config-service/internal/repo/repo.go:177
+[0.465ms] [rows:1] UPDATE "config" SET "data"='{"token_ttl": 7200, "jwt_secret": "prod-jwt-secret-key-32-chars-long", "refresh_ttl": 172800, "session_store": "redis"}',"updated_at"='2026-05-23 03:04:15.564',"version"=3 WHERE service_id = 'auth-service' AND "config"."deleted_at" IS NULL
+
+2026/05/23 03:04:15 /home/delorency/work/config-service/internal/repo/repo.go:191
+[0.583ms] [rows:1] INSERT INTO "config_history" ("service_id","data","version","created_at") VALUES ('auth-service','{"token_ttl": 7200, "jwt_secret": "prod-jwt-secret-key-32-chars-long", "refresh_ttl": 172800, "session_store": "redis"}',3,'2026-05-23 03:04:15.564') RETURNING "id"
+
+2026/05/23 03:04:33 /home/delorency/work/config-service/internal/repo/repo.go:26
+[0.711ms] [rows:1] SELECT * FROM "config" WHERE service_id = 'auth-service' AND "config"."deleted_at" IS NULL ORDER BY created_at DESC,"config"."id" LIMIT 1
+
+2026/05/23 03:04:33 /home/delorency/work/config-service/internal/repo/repo.go:52
+[0.459ms] [rows:1] SELECT count(*) FROM "config_history" WHERE service_id = 'auth-service'
+
+2026/05/23 03:04:33 /home/delorency/work/config-service/internal/repo/repo.go:60
+[0.454ms] [rows:3] SELECT * FROM "config_history" WHERE service_id = 'auth-service' ORDER BY version DESC LIMIT 50
+
+2026/05/23 03:43:13 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:402
+[2.597ms] [rows:1] SELECT count(*) FROM information_schema.tables WHERE table_schema = CURRENT_SCHEMA() AND table_name = 'migrations' AND table_type = 'BASE TABLE'
+
+2026/05/23 03:43:13 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:413
+[0.387ms] [rows:1] SELECT count(*) FROM "migrations" WHERE id = '20260321_create_table'
+
+2026/05/23 03:43:37 /home/delorency/work/config-service/internal/repo/repo.go:207
+[0.651ms] [rows:0] DELETE FROM "config_history" WHERE service_id = 'sdf'
+
+2026/05/23 03:43:37 /home/delorency/work/config-service/internal/repo/repo.go:211
+[0.730ms] [rows:0] UPDATE "config" SET "deleted_at"='2026-05-23 03:43:37.065' WHERE service_id = 'sdf' AND "config"."deleted_at" IS NULL
+
+2026/05/23 03:43:49 /home/delorency/work/config-service/internal/repo/repo.go:207
+[0.246ms] [rows:3] DELETE FROM "config_history" WHERE service_id = 'auth-service'
+
+2026/05/23 03:43:49 /home/delorency/work/config-service/internal/repo/repo.go:211
+[0.258ms] [rows:1] UPDATE "config" SET "deleted_at"='2026-05-23 03:43:49.995' WHERE service_id = 'auth-service' AND "config"."deleted_at" IS NULL
+
+2026/05/23 03:50:50 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:402
+[2.510ms] [rows:1] SELECT count(*) FROM information_schema.tables WHERE table_schema = CURRENT_SCHEMA() AND table_name = 'migrations' AND table_type = 'BASE TABLE'
+
+2026/05/23 03:50:50 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:413
+[0.379ms] [rows:1] SELECT count(*) FROM "migrations" WHERE id = '20260321_create_table'
+
+2026/05/23 03:50:53 /home/delorency/work/config-service/internal/repo/repo.go:207
+[0.751ms] [rows:0] DELETE FROM "config_history" WHERE service_id = 'auth-serviced'
+
+2026/05/23 03:50:53 /home/delorency/work/config-service/internal/repo/repo.go:211
+[0.711ms] [rows:0] DELETE FROM "config" WHERE service_id = 'auth-serviced'
+
+2026/05/23 03:52:11 /home/delorency/work/config-service/internal/repo/repo.go:26 record not found
+[1.090ms] [rows:0] SELECT * FROM "config" WHERE service_id = 'auth-service' AND "config"."deleted_at" IS NULL ORDER BY created_at DESC,"config"."id" LIMIT 1
+
+2026/05/23 03:52:29 /home/delorency/work/config-service/internal/repo/repo.go:26 record not found
+[0.430ms] [rows:0] SELECT * FROM "config" WHERE service_id = 'auth-service' AND "config"."deleted_at" IS NULL ORDER BY created_at DESC,"config"."id" LIMIT 1
+
+2026/05/23 03:52:29 /home/delorency/work/config-service/internal/repo/repo.go:114 record not found
+[0.372ms] [rows:0] SELECT * FROM "config" WHERE service_id = 'auth-service' AND "config"."deleted_at" IS NULL ORDER BY "config"."id" LIMIT 1
+
+2026/05/23 03:52:29 /home/delorency/work/config-service/internal/repo/repo.go:117
+[0.651ms] [rows:1] INSERT INTO "config" ("created_at","updated_at","deleted_at","service_id","data","version") VALUES ('2026-05-23 03:52:29.893','2026-05-23 03:52:29.893',NULL,'auth-service','{
+  "jwt_secret": "prod-jwt-secret-key-32-chars-long",
+  "token_ttl": 7200,
+  "refresh_ttl": 172800,
+  "session_store": "redis"
+}',1) RETURNING "id"
+
+2026/05/23 03:52:29 /home/delorency/work/config-service/internal/repo/repo.go:140
+[0.464ms] [rows:1] INSERT INTO "config_history" ("service_id","data","version","created_at") VALUES ('auth-service','{
+  "jwt_secret": "prod-jwt-secret-key-32-chars-long",
+  "token_ttl": 7200,
+  "refresh_ttl": 172800,
+  "session_store": "redis"
+}',1,'2026-05-23 03:52:29.893') RETURNING "id"
+
+2026/05/23 03:52:33 /home/delorency/work/config-service/internal/repo/repo.go:26
+[0.506ms] [rows:1] SELECT * FROM "config" WHERE service_id = 'auth-service' AND "config"."deleted_at" IS NULL ORDER BY created_at DESC,"config"."id" LIMIT 1
+
+2026/05/23 03:52:33 /home/delorency/work/config-service/internal/repo/repo.go:52
+[0.385ms] [rows:1] SELECT count(*) FROM "config_history" WHERE service_id = 'auth-service'
+
+2026/05/23 03:52:33 /home/delorency/work/config-service/internal/repo/repo.go:60
+[0.333ms] [rows:1] SELECT * FROM "config_history" WHERE service_id = 'auth-service' ORDER BY version DESC LIMIT 50
+
+2026/05/23 03:52:47 /home/delorency/work/config-service/internal/repo/repo.go:38
+[1.110ms] [rows:1] SELECT * FROM "config_history" WHERE service_id = 'auth-service' AND version = 1 ORDER BY "config_history"."id" LIMIT 1
+
+2026/05/23 03:52:49 /home/delorency/work/config-service/internal/repo/repo.go:38 record not found
+[0.378ms] [rows:0] SELECT * FROM "config_history" WHERE service_id = 'auth-service' AND version = 2 ORDER BY "config_history"."id" LIMIT 1
+
+2026/05/23 03:52:50 /home/delorency/work/config-service/internal/repo/repo.go:38
+[0.623ms] [rows:1] SELECT * FROM "config_history" WHERE service_id = 'auth-service' AND version = 1 ORDER BY "config_history"."id" LIMIT 1
+
+2026/05/23 03:53:13 /home/delorency/work/config-service/internal/repo/repo.go:26
+[0.463ms] [rows:1] SELECT * FROM "config" WHERE service_id = 'auth-service' AND "config"."deleted_at" IS NULL ORDER BY created_at DESC,"config"."id" LIMIT 1
+
+2026/05/23 03:53:13 /home/delorency/work/config-service/internal/repo/repo.go:114
+[0.307ms] [rows:1] SELECT * FROM "config" WHERE service_id = 'auth-service' AND "config"."deleted_at" IS NULL ORDER BY "config"."id" LIMIT 1
+
+2026/05/23 03:53:13 /home/delorency/work/config-service/internal/repo/repo.go:125
+[0.632ms] [rows:1] UPDATE "config" SET "data"='{
+  "jwt_secret": "prod-jwt-secret-key-32-chars-long",
+  "token_ttl": 7200,
+  "refresh_ttl": 172800,
+  "session_store": "memory"
+}',"updated_at"='2026-05-23 03:53:13.007',"version"=2 WHERE service_id = 'auth-service' AND "config"."deleted_at" IS NULL
+
+2026/05/23 03:53:13 /home/delorency/work/config-service/internal/repo/repo.go:140
+[0.201ms] [rows:1] INSERT INTO "config_history" ("service_id","data","version","created_at") VALUES ('auth-service','{
+  "jwt_secret": "prod-jwt-secret-key-32-chars-long",
+  "token_ttl": 7200,
+  "refresh_ttl": 172800,
+  "session_store": "memory"
+}',2,'2026-05-23 03:53:13.008') RETURNING "id"
+
+2026/05/23 03:53:16 /home/delorency/work/config-service/internal/repo/repo.go:26
+[0.429ms] [rows:1] SELECT * FROM "config" WHERE service_id = 'auth-service' AND "config"."deleted_at" IS NULL ORDER BY created_at DESC,"config"."id" LIMIT 1
+
+2026/05/23 03:53:16 /home/delorency/work/config-service/internal/repo/repo.go:52
+[0.238ms] [rows:1] SELECT count(*) FROM "config_history" WHERE service_id = 'auth-service'
+
+2026/05/23 03:53:16 /home/delorency/work/config-service/internal/repo/repo.go:60
+[0.223ms] [rows:2] SELECT * FROM "config_history" WHERE service_id = 'auth-service' ORDER BY version DESC LIMIT 50
+
+2026/05/23 03:53:27 /home/delorency/work/config-service/internal/repo/repo.go:38
+[0.403ms] [rows:1] SELECT * FROM "config_history" WHERE service_id = 'auth-service' AND version = 1 ORDER BY "config_history"."id" LIMIT 1
+
+2026/05/23 03:53:27 /home/delorency/work/config-service/internal/repo/repo.go:154
+[0.326ms] [rows:1] SELECT * FROM "config_history" WHERE service_id = 'auth-service' AND version = 1 ORDER BY "config_history"."id" LIMIT 1
+
+2026/05/23 03:53:27 /home/delorency/work/config-service/internal/repo/repo.go:162
+[0.254ms] [rows:1] SELECT * FROM "config" WHERE service_id = 'auth-service' AND "config"."deleted_at" IS NULL ORDER BY "config"."id" LIMIT 1
+
+2026/05/23 03:53:27 /home/delorency/work/config-service/internal/repo/repo.go:177
+[0.206ms] [rows:1] UPDATE "config" SET "data"='{"token_ttl": 7200, "jwt_secret": "prod-jwt-secret-key-32-chars-long", "refresh_ttl": 172800, "session_store": "redis"}',"updated_at"='2026-05-23 03:53:27.632',"version"=3 WHERE service_id = 'auth-service' AND "config"."deleted_at" IS NULL
+
+2026/05/23 03:53:27 /home/delorency/work/config-service/internal/repo/repo.go:191
+[0.202ms] [rows:1] INSERT INTO "config_history" ("service_id","data","version","created_at") VALUES ('auth-service','{"token_ttl": 7200, "jwt_secret": "prod-jwt-secret-key-32-chars-long", "refresh_ttl": 172800, "session_store": "redis"}',3,'2026-05-23 03:53:27.632') RETURNING "id"
+
+2026/05/23 03:53:30 /home/delorency/work/config-service/internal/repo/repo.go:38
+[0.447ms] [rows:1] SELECT * FROM "config_history" WHERE service_id = 'auth-service' AND version = 1 ORDER BY "config_history"."id" LIMIT 1
+
+2026/05/23 03:53:30 /home/delorency/work/config-service/internal/repo/repo.go:154
+[0.204ms] [rows:1] SELECT * FROM "config_history" WHERE service_id = 'auth-service' AND version = 1 ORDER BY "config_history"."id" LIMIT 1
+
+2026/05/23 03:53:30 /home/delorency/work/config-service/internal/repo/repo.go:162
+[0.376ms] [rows:1] SELECT * FROM "config" WHERE service_id = 'auth-service' AND "config"."deleted_at" IS NULL ORDER BY "config"."id" LIMIT 1
+
+2026/05/23 03:53:30 /home/delorency/work/config-service/internal/repo/repo.go:177
+[0.383ms] [rows:1] UPDATE "config" SET "data"='{"token_ttl": 7200, "jwt_secret": "prod-jwt-secret-key-32-chars-long", "refresh_ttl": 172800, "session_store": "redis"}',"updated_at"='2026-05-23 03:53:30.148',"version"=4 WHERE service_id = 'auth-service' AND "config"."deleted_at" IS NULL
+
+2026/05/23 03:53:30 /home/delorency/work/config-service/internal/repo/repo.go:191
+[0.334ms] [rows:1] INSERT INTO "config_history" ("service_id","data","version","created_at") VALUES ('auth-service','{"token_ttl": 7200, "jwt_secret": "prod-jwt-secret-key-32-chars-long", "refresh_ttl": 172800, "session_store": "redis"}',4,'2026-05-23 03:53:30.148') RETURNING "id"
+
+2026/05/23 03:54:13 /home/delorency/work/config-service/internal/repo/repo.go:26
+[0.461ms] [rows:1] SELECT * FROM "config" WHERE service_id = 'auth-service' AND "config"."deleted_at" IS NULL ORDER BY created_at DESC,"config"."id" LIMIT 1
+
+2026/05/23 03:54:13 /home/delorency/work/config-service/internal/repo/repo.go:52
+[0.215ms] [rows:1] SELECT count(*) FROM "config_history" WHERE service_id = 'auth-service'
+
+2026/05/23 03:54:13 /home/delorency/work/config-service/internal/repo/repo.go:60
+[0.270ms] [rows:4] SELECT * FROM "config_history" WHERE service_id = 'auth-service' ORDER BY version DESC LIMIT 50
+
+2026/05/23 03:54:47 /home/delorency/work/config-service/internal/repo/repo.go:207
+[0.226ms] [rows:0] DELETE FROM "config_history" WHERE service_id = 'auth-serviced'
+
+2026/05/23 03:54:47 /home/delorency/work/config-service/internal/repo/repo.go:211
+[0.161ms] [rows:0] DELETE FROM "config" WHERE service_id = 'auth-serviced'
+
+2026/05/23 03:54:56 /home/delorency/work/config-service/internal/repo/repo.go:207
+[0.268ms] [rows:4] DELETE FROM "config_history" WHERE service_id = 'auth-service'
+
+2026/05/23 03:54:56 /home/delorency/work/config-service/internal/repo/repo.go:211
+[0.158ms] [rows:1] DELETE FROM "config" WHERE service_id = 'auth-service'
+
+2026/05/23 16:05:07 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:402
+[13.822ms] [rows:1] SELECT count(*) FROM information_schema.tables WHERE table_schema = CURRENT_SCHEMA() AND table_name = 'migrations' AND table_type = 'BASE TABLE'
+
+2026/05/23 16:05:07 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:413
+[0.888ms] [rows:1] SELECT count(*) FROM "migrations" WHERE id = '20260321_create_table'
+
+2026/05/23 16:07:38 /home/delorency/work/config-service/internal/repo/repo.go:26 record not found
+[5.451ms] [rows:0] SELECT * FROM "config" WHERE service_id = 'auth-service' AND "config"."deleted_at" IS NULL ORDER BY created_at DESC,"config"."id" LIMIT 1
+
+2026/05/23 16:08:37 /home/delorency/work/config-service/internal/repo/repo.go:26 record not found
+[0.480ms] [rows:0] SELECT * FROM "config" WHERE service_id = 'auth-service' AND "config"."deleted_at" IS NULL ORDER BY created_at DESC,"config"."id" LIMIT 1
+
+2026/05/23 16:08:48 /home/delorency/work/config-service/internal/repo/repo.go:26 record not found
+[0.390ms] [rows:0] SELECT * FROM "config" WHERE service_id = 'auth-service' AND "config"."deleted_at" IS NULL ORDER BY created_at DESC,"config"."id" LIMIT 1
+
+2026/05/23 16:08:48 /home/delorency/work/config-service/internal/repo/repo.go:114 record not found
+[0.419ms] [rows:0] SELECT * FROM "config" WHERE service_id = 'auth-service' AND "config"."deleted_at" IS NULL ORDER BY "config"."id" LIMIT 1
+
+2026/05/23 16:08:48 /home/delorency/work/config-service/internal/repo/repo.go:117
+[4.639ms] [rows:1] INSERT INTO "config" ("created_at","updated_at","deleted_at","service_id","data","version") VALUES ('2026-05-23 16:08:48.488','2026-05-23 16:08:48.488',NULL,'auth-service','{
+  "jwt_secret": "prod-jwt-secret-key-32-chars-long",
+  "token_ttl": 7200,
+  "refresh_ttl": 172800,
+  "session_store": "redis"
+}',1) RETURNING "id"
+
+2026/05/23 16:08:48 /home/delorency/work/config-service/internal/repo/repo.go:140
+[0.818ms] [rows:1] INSERT INTO "config_history" ("service_id","data","version","created_at") VALUES ('auth-service','{
+  "jwt_secret": "prod-jwt-secret-key-32-chars-long",
+  "token_ttl": 7200,
+  "refresh_ttl": 172800,
+  "session_store": "redis"
+}',1,'2026-05-23 16:08:48.492') RETURNING "id"
+
+2026/05/23 16:08:53 /home/delorency/work/config-service/internal/repo/repo.go:26
+[0.493ms] [rows:1] SELECT * FROM "config" WHERE service_id = 'auth-service' AND "config"."deleted_at" IS NULL ORDER BY created_at DESC,"config"."id" LIMIT 1
+
+2026/05/23 16:08:53 /home/delorency/work/config-service/internal/repo/repo.go:114
+[0.303ms] [rows:1] SELECT * FROM "config" WHERE service_id = 'auth-service' AND "config"."deleted_at" IS NULL ORDER BY "config"."id" LIMIT 1
+
+2026/05/23 16:08:53 /home/delorency/work/config-service/internal/repo/repo.go:125
+[4.378ms] [rows:1] UPDATE "config" SET "data"='{
+  "jwt_secret": "prod-jwt-secret-key-32-chars-long",
+  "token_ttl": 7200,
+  "refresh_ttl": 172800,
+  "session_store": "redis"
+}',"updated_at"='2026-05-23 16:08:53.713',"version"=2 WHERE service_id = 'auth-service' AND "config"."deleted_at" IS NULL
+
+2026/05/23 16:08:53 /home/delorency/work/config-service/internal/repo/repo.go:140
+[0.304ms] [rows:1] INSERT INTO "config_history" ("service_id","data","version","created_at") VALUES ('auth-service','{
+  "jwt_secret": "prod-jwt-secret-key-32-chars-long",
+  "token_ttl": 7200,
+  "refresh_ttl": 172800,
+  "session_store": "redis"
+}',2,'2026-05-23 16:08:53.718') RETURNING "id"
+
+2026/05/23 16:09:00 /home/delorency/work/config-service/internal/repo/repo.go:26
+[0.426ms] [rows:1] SELECT * FROM "config" WHERE service_id = 'auth-service' AND "config"."deleted_at" IS NULL ORDER BY created_at DESC,"config"."id" LIMIT 1
+
+2026/05/23 16:09:00 /home/delorency/work/config-service/internal/repo/repo.go:52
+[0.553ms] [rows:1] SELECT count(*) FROM "config_history" WHERE service_id = 'auth-service'
+
+2026/05/23 16:09:00 /home/delorency/work/config-service/internal/repo/repo.go:60
+[0.424ms] [rows:2] SELECT * FROM "config_history" WHERE service_id = 'auth-service' ORDER BY version DESC LIMIT 50
+
+2026/05/23 16:10:21 /home/delorency/work/config-service/internal/repo/repo.go:26 record not found
+[0.307ms] [rows:0] SELECT * FROM "config" WHERE service_id = 'test-service' AND "config"."deleted_at" IS NULL ORDER BY created_at DESC,"config"."id" LIMIT 1
+
+2026/05/23 16:10:21 /home/delorency/work/config-service/internal/repo/repo.go:26 record not found
+[0.144ms] [rows:0] SELECT * FROM "config" WHERE service_id = 'test-service' AND "config"."deleted_at" IS NULL ORDER BY created_at DESC,"config"."id" LIMIT 1
+
+2026/05/23 16:10:54 /home/delorency/work/config-service/internal/repo/repo.go:26
+[0.617ms] [rows:1] SELECT * FROM "config" WHERE service_id = 'auth-service' AND "config"."deleted_at" IS NULL ORDER BY created_at DESC,"config"."id" LIMIT 1
+
+2026/05/23 16:10:54 /home/delorency/work/config-service/internal/repo/repo.go:26 record not found
+[0.381ms] [rows:0] SELECT * FROM "config" WHERE service_id = 'test-service' AND "config"."deleted_at" IS NULL ORDER BY created_at DESC,"config"."id" LIMIT 1
+
+2026/05/23 16:11:29 /home/delorency/work/config-service/internal/repo/repo.go:26
+[0.269ms] [rows:1] SELECT * FROM "config" WHERE service_id = 'auth-service' AND "config"."deleted_at" IS NULL ORDER BY created_at DESC,"config"."id" LIMIT 1
+
+2026/05/23 16:11:29 /home/delorency/work/config-service/internal/repo/repo.go:26 record not found
+[0.230ms] [rows:0] SELECT * FROM "config" WHERE service_id = 'test-service' AND "config"."deleted_at" IS NULL ORDER BY created_at DESC,"config"."id" LIMIT 1
+
+2026/05/23 16:11:45 /home/delorency/work/config-service/internal/repo/repo.go:26
+[0.385ms] [rows:1] SELECT * FROM "config" WHERE service_id = 'auth-service' AND "config"."deleted_at" IS NULL ORDER BY created_at DESC,"config"."id" LIMIT 1
+
+2026/05/23 16:11:45 /home/delorency/work/config-service/internal/repo/repo.go:114
+[0.310ms] [rows:1] SELECT * FROM "config" WHERE service_id = 'auth-service' AND "config"."deleted_at" IS NULL ORDER BY "config"."id" LIMIT 1
+
+2026/05/23 16:11:45 /home/delorency/work/config-service/internal/repo/repo.go:125
+[0.275ms] [rows:1] UPDATE "config" SET "data"='{
+  "jwt_secret": "prod-jwt-secret-key-32-chars-long",
+  "token_ttl": 7200,
+  "refresh_ttl": 172800,
+  "session_store": "memory"
+}',"updated_at"='2026-05-23 16:11:45.489',"version"=3 WHERE service_id = 'auth-service' AND "config"."deleted_at" IS NULL
+
+2026/05/23 16:11:45 /home/delorency/work/config-service/internal/repo/repo.go:140
+[0.465ms] [rows:1] INSERT INTO "config_history" ("service_id","data","version","created_at") VALUES ('auth-service','{
+  "jwt_secret": "prod-jwt-secret-key-32-chars-long",
+  "token_ttl": 7200,
+  "refresh_ttl": 172800,
+  "session_store": "memory"
+}',3,'2026-05-23 16:11:45.489') RETURNING "id"
+
+2026/05/23 16:11:59 /home/delorency/work/config-service/internal/repo/repo.go:26
+[0.349ms] [rows:1] SELECT * FROM "config" WHERE service_id = 'auth-service' AND "config"."deleted_at" IS NULL ORDER BY created_at DESC,"config"."id" LIMIT 1
+
+2026/05/23 16:11:59 /home/delorency/work/config-service/internal/repo/repo.go:52
+[0.279ms] [rows:1] SELECT count(*) FROM "config_history" WHERE service_id = 'auth-service'
+
+2026/05/23 16:11:59 /home/delorency/work/config-service/internal/repo/repo.go:60
+[0.292ms] [rows:3] SELECT * FROM "config_history" WHERE service_id = 'auth-service' ORDER BY version DESC LIMIT 50
+
+2026/05/23 16:13:06 /home/delorency/work/config-service/internal/repo/repo.go:26
+[0.303ms] [rows:1] SELECT * FROM "config" WHERE service_id = 'auth-service' AND "config"."deleted_at" IS NULL ORDER BY created_at DESC,"config"."id" LIMIT 1
+
+2026/05/23 16:13:06 /home/delorency/work/config-service/internal/repo/repo.go:26 record not found
+[0.211ms] [rows:0] SELECT * FROM "config" WHERE service_id = 'test-service' AND "config"."deleted_at" IS NULL ORDER BY created_at DESC,"config"."id" LIMIT 1
+
+2026/05/23 16:14:43 /home/delorency/work/config-service/internal/repo/repo.go:26
+[0.692ms] [rows:1] SELECT * FROM "config" WHERE service_id = 'auth-service' AND "config"."deleted_at" IS NULL ORDER BY created_at DESC,"config"."id" LIMIT 1
+
+2026/05/23 16:14:43 /home/delorency/work/config-service/internal/repo/repo.go:26
+[0.400ms] [rows:1] SELECT * FROM "config" WHERE service_id = 'auth-service' AND "config"."deleted_at" IS NULL ORDER BY created_at DESC,"config"."id" LIMIT 1
+
+2026/05/23 16:15:02 /home/delorency/work/config-service/internal/repo/repo.go:38
+[2.724ms] [rows:1] SELECT * FROM "config_history" WHERE service_id = 'auth-service' AND version = 1 ORDER BY "config_history"."id" LIMIT 1
+
+2026/05/23 16:15:02 /home/delorency/work/config-service/internal/repo/repo.go:154
+[0.267ms] [rows:1] SELECT * FROM "config_history" WHERE service_id = 'auth-service' AND version = 1 ORDER BY "config_history"."id" LIMIT 1
+
+2026/05/23 16:15:02 /home/delorency/work/config-service/internal/repo/repo.go:162
+[0.306ms] [rows:1] SELECT * FROM "config" WHERE service_id = 'auth-service' AND "config"."deleted_at" IS NULL ORDER BY "config"."id" LIMIT 1
+
+2026/05/23 16:15:02 /home/delorency/work/config-service/internal/repo/repo.go:177
+[0.246ms] [rows:1] UPDATE "config" SET "data"='{"token_ttl": 7200, "jwt_secret": "prod-jwt-secret-key-32-chars-long", "refresh_ttl": 172800, "session_store": "redis"}',"updated_at"='2026-05-23 16:15:02.343',"version"=4 WHERE service_id = 'auth-service' AND "config"."deleted_at" IS NULL
+
+2026/05/23 16:15:02 /home/delorency/work/config-service/internal/repo/repo.go:191
+[0.207ms] [rows:1] INSERT INTO "config_history" ("service_id","data","version","created_at") VALUES ('auth-service','{"token_ttl": 7200, "jwt_secret": "prod-jwt-secret-key-32-chars-long", "refresh_ttl": 172800, "session_store": "redis"}',4,'2026-05-23 16:15:02.344') RETURNING "id"
+
+2026/05/23 16:15:10 /home/delorency/work/config-service/internal/repo/repo.go:26
+[0.379ms] [rows:1] SELECT * FROM "config" WHERE service_id = 'auth-service' AND "config"."deleted_at" IS NULL ORDER BY created_at DESC,"config"."id" LIMIT 1
