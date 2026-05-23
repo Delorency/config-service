@@ -26,7 +26,7 @@ func (h *SchemaHandler) DeleteSchema(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	if err := h.service.DeleteSchema(serviceID); err != nil {
+	if err := h.service.DeleteSchema(r.Context(), serviceID); err != nil {
 		WriteError(w, http.StatusNotFound, err.Error())
 		return
 	}

@@ -104,3 +104,9 @@
 2026/05/23 03:04:03 gRPC Server starting on localhost:8081
 2026/05/23 03:04:03 HTTP Server starting on localhost:8080
 2026/05/23 03:29:15 Received shutdown signal, stopping servers...
+2026/05/23 03:43:13 gRPC Server starting on localhost:8081
+2026/05/23 03:43:13 HTTP Server starting on localhost:8080
+2026/05/23 03:50:48 Received shutdown signal, stopping servers...
+2026/05/23 03:50:50 gRPC Server starting on localhost:8081
+2026/05/23 03:50:50 HTTP Server starting on localhost:8080
+2026/05/23 03:55:16 Received shutdown signal, stopping servers...

@@ -201,3 +201,17 @@ func (r *ConfigRepository) Rollback(ctx context.Context, serviceID string, targe
 
 	return result, err
 }
+
+func (r *ConfigRepository) DeleteAllServiceData(ctx context.Context, serviceID string) error {
+	return r.db.WithContext(ctx).Transaction(func(tx *gorm.DB) error {
+		if err := tx.Unscoped().Where("service_id = ?", serviceID).Delete(&models.ConfigHistory{}).Error; err != nil {
+			return fmt.Errorf("failed to delete config history: %w", err)
+		}
+
+		if err := tx.Unscoped().Where("service_id = ?", serviceID).Delete(&models.Config{}).Error; err != nil {
+			return fmt.Errorf("failed to delete config: %w", err)
+		}
+
+		return nil
+	})
+}

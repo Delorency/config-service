@@ -32,8 +32,8 @@ func NewRouter(logger *log.Logger, schemadir string,
 	validator *validator.Validator) *chi.Mux {
 
 	router := AddMiddleware(chi.NewRouter())
-	schemaH := sh.NewSchemaHandler(ss.NewSchemaService(schemadir))
 	configH := ch.NewConfigHandler(cs.NewConfigService(repo, watcher, validator))
+	schemaH := sh.NewSchemaHandler(ss.NewSchemaService(schemadir, repo, validator))
 
 	router.Get("/swagger/*", httpSwagger.WrapHandler)
 
