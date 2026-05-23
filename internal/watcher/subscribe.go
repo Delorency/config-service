@@ -1,6 +1,8 @@
 package watcher
 
-import "time"
+import (
+	"time"
+)
 
 func (wm *WatcherManager) Subscribe(serviceID, subscriberID string, currentVersion int) (*Subscriber, func()) {
 	wm.mu.Lock()
@@ -48,7 +50,7 @@ func (wm *WatcherManager) getSubscribersCopy(serviceID string) []*Subscriber {
 
 	subs := wm.subscribers[serviceID]
 	if len(subs) == 0 {
-		return nil
+		return []*Subscriber{}
 	}
 
 	c := make([]*Subscriber, len(subs))

@@ -1,0 +1,29 @@
+services:
+  db:
+    image: postgres:15
+    restart: always
+    container_name: db
+    environment:
+      POSTGRES_DB: ${DB_NAME} 
+      POSTGRES_USER: ${DB_ROLE} 
+      POSTGRES_PASSWORD: ${DB_PASS} 
+    ports:
+      - "${DOCKER_HOST_DB_PORT}:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  app:
+    build: .
+    restart: always
+    container_name: app
+    depends_on:
+      - db
+    environment:
+      DB_HOST: db
+    ports:
+      - "${DOCKER_HOST_PORT}:${HTTPPORT}"
+      - "${DOCKER_HOST_GRPC_PORT}:${GRPCPORT}"
+    volumes:
+      - ${DOCKER_HOST_LOGSDIR}:/root/${LOGSDIR}
+volumes:
+  postgres_data:

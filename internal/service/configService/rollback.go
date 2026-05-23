@@ -20,6 +20,10 @@ func (s *ConfigService) Rollback(ctx context.Context, serviceID string, targetVe
 		return nil, fmt.Errorf("failed to get target version %d: %w", targetVersion, err)
 	}
 
+	if target == nil {
+		return nil, fmt.Errorf("target version %d has empty data", targetVersion)
+	}
+
 	if s.validator != nil {
 		if err := s.validator.ValidateByServiceID(serviceID, target.Data); err != nil {
 			return nil, fmt.Errorf("target version %d validation failed: %w", targetVersion, err)

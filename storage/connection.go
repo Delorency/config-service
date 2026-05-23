@@ -12,7 +12,7 @@ import (
 func Psql(dbrole, dbpass, dbname, dbhost, dbport string, logger logger.Interface) *gorm.DB {
 	db, err := gorm.Open(
 		postgres.New(postgres.Config{
-			DSN: fmt.Sprintf("user=%s password=%s dbname=%s host=%v port=%s sslmode=disable TimeZone=Asia/Shanghai",
+			DSN: fmt.Sprintf("user=%s password=%s dbname=%s host=%v port=%s sslmode=disable TimeZone=UTC",
 				dbrole, dbpass, dbname, dbhost, dbport),
 		}), &gorm.Config{Logger: logger})
 

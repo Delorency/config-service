@@ -1,0 +1,144 @@
+
+2026/05/23 20:20:46 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:402
+[5.867ms] [rows:1] SELECT count(*) FROM information_schema.tables WHERE table_schema = CURRENT_SCHEMA() AND table_name = 'migrations' AND table_type = 'BASE TABLE'
+
+2026/05/23 20:20:46 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:413
+[0.570ms] [rows:1] SELECT count(*) FROM "migrations" WHERE id = '20260321_create_table'
+
+2026/05/23 20:21:12 /home/delorency/work/config-service/internal/repo/repo.go:26
+[3.891ms] [rows:1] SELECT * FROM "config" WHERE service_id = 'auth-service' AND "config"."deleted_at" IS NULL ORDER BY created_at DESC,"config"."id" LIMIT 1
+
+2026/05/23 20:21:12 /home/delorency/work/config-service/internal/repo/repo.go:52
+[0.663ms] [rows:1] SELECT count(*) FROM "config_history" WHERE service_id = 'auth-service'
+
+2026/05/23 20:21:12 /home/delorency/work/config-service/internal/repo/repo.go:60
+[0.343ms] [rows:5] SELECT * FROM "config_history" WHERE service_id = 'auth-service' ORDER BY version DESC LIMIT 50
+
+2026/05/23 20:21:21 /home/delorency/work/config-service/internal/repo/repo.go:207
+[0.391ms] [rows:5] DELETE FROM "config_history" WHERE service_id = 'auth-service'
+
+2026/05/23 20:21:21 /home/delorency/work/config-service/internal/repo/repo.go:211
+[0.298ms] [rows:1] DELETE FROM "config" WHERE service_id = 'auth-service'
+
+2026/05/23 20:21:26 /home/delorency/work/config-service/internal/repo/repo.go:26 record not found
+[0.482ms] [rows:0] SELECT * FROM "config" WHERE service_id = 'auth-service' AND "config"."deleted_at" IS NULL ORDER BY created_at DESC,"config"."id" LIMIT 1
+
+2026/05/23 20:21:46 /home/delorency/work/config-service/internal/repo/repo.go:38 record not found
+[0.485ms] [rows:0] SELECT * FROM "config_history" WHERE service_id = 'auth-service' AND version = 1234 ORDER BY "config_history"."id" LIMIT 1
+
+2026/05/23 20:21:46 /home/delorency/work/config-service/internal/repo/repo.go:38 record not found
+[0.360ms] [rows:0] SELECT * FROM "config_history" WHERE service_id = 'auth-service' AND version = 1234 ORDER BY "config_history"."id" LIMIT 1
+
+2026/05/23 20:24:57 /home/delorency/work/config-service/internal/repo/repo.go:38 record not found
+[0.373ms] [rows:0] SELECT * FROM "config_history" WHERE service_id = 'auth-service' AND version = 1234 ORDER BY "config_history"."id" LIMIT 1
+
+2026/05/23 20:25:44 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:402
+[3.869ms] [rows:1] SELECT count(*) FROM information_schema.tables WHERE table_schema = CURRENT_SCHEMA() AND table_name = 'migrations' AND table_type = 'BASE TABLE'
+
+2026/05/23 20:25:44 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:413
+[0.534ms] [rows:1] SELECT count(*) FROM "migrations" WHERE id = '20260321_create_table'
+
+2026/05/23 20:25:46 /home/delorency/work/config-service/internal/repo/repo.go:38 record not found
+[1.954ms] [rows:0] SELECT * FROM "config_history" WHERE service_id = 'auth-service' AND version = 1234 ORDER BY "config_history"."id" LIMIT 1
+
+2026/05/23 20:31:03 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:402
+[2.755ms] [rows:1] SELECT count(*) FROM information_schema.tables WHERE table_schema = CURRENT_SCHEMA() AND table_name = 'migrations' AND table_type = 'BASE TABLE'
+
+2026/05/23 20:31:03 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:413
+[0.620ms] [rows:1] SELECT count(*) FROM "migrations" WHERE id = '20260321_create_table'
+
+2026/05/23 20:31:06 /home/delorency/work/config-service/internal/repo/repo.go:38 record not found
+[1.012ms] [rows:0] SELECT * FROM "config_history" WHERE service_id = 'auth-service' AND version = 1234 ORDER BY "config_history"."id" LIMIT 1
+
+2026/05/23 20:31:30 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:402
+[3.172ms] [rows:1] SELECT count(*) FROM information_schema.tables WHERE table_schema = CURRENT_SCHEMA() AND table_name = 'migrations' AND table_type = 'BASE TABLE'
+
+2026/05/23 20:31:30 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:413
+[0.640ms] [rows:1] SELECT count(*) FROM "migrations" WHERE id = '20260321_create_table'
+
+2026/05/23 20:31:33 /home/delorency/work/config-service/internal/repo/repo.go:38 record not found
+[1.587ms] [rows:0] SELECT * FROM "config_history" WHERE service_id = 'auth-service' AND version = 1234 ORDER BY "config_history"."id" LIMIT 1
+
+2026/05/23 20:32:00 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:402
+[2.719ms] [rows:1] SELECT count(*) FROM information_schema.tables WHERE table_schema = CURRENT_SCHEMA() AND table_name = 'migrations' AND table_type = 'BASE TABLE'
+
+2026/05/23 20:32:00 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:413
+[0.390ms] [rows:1] SELECT count(*) FROM "migrations" WHERE id = '20260321_create_table'
+
+2026/05/23 20:32:04 /home/delorency/work/config-service/internal/repo/repo.go:38 record not found
+[1.055ms] [rows:0] SELECT * FROM "config_history" WHERE service_id = 'auth-service' AND version = 1234 ORDER BY "config_history"."id" LIMIT 1
+
+2026/05/23 20:33:00 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:402
+[2.441ms] [rows:1] SELECT count(*) FROM information_schema.tables WHERE table_schema = CURRENT_SCHEMA() AND table_name = 'migrations' AND table_type = 'BASE TABLE'
+
+2026/05/23 20:33:00 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:413
+[0.359ms] [rows:1] SELECT count(*) FROM "migrations" WHERE id = '20260321_create_table'
+
+2026/05/23 20:33:35 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:402
+[2.463ms] [rows:1] SELECT count(*) FROM information_schema.tables WHERE table_schema = CURRENT_SCHEMA() AND table_name = 'migrations' AND table_type = 'BASE TABLE'
+
+2026/05/23 20:33:35 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:413
+[0.414ms] [rows:1] SELECT count(*) FROM "migrations" WHERE id = '20260321_create_table'
+
+2026/05/23 20:33:37 /home/delorency/work/config-service/internal/repo/repo.go:38 record not found
+[1.208ms] [rows:0] SELECT * FROM "config_history" WHERE service_id = 'auth-service' AND version = 1234 ORDER BY "config_history"."id" LIMIT 1
+
+2026/05/23 20:34:32 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:402
+[3.133ms] [rows:1] SELECT count(*) FROM information_schema.tables WHERE table_schema = CURRENT_SCHEMA() AND table_name = 'migrations' AND table_type = 'BASE TABLE'
+
+2026/05/23 20:34:32 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:413
+[0.461ms] [rows:1] SELECT count(*) FROM "migrations" WHERE id = '20260321_create_table'
+
+2026/05/23 20:34:33 /home/delorency/work/config-service/internal/repo/repo.go:38 record not found
+[1.135ms] [rows:0] SELECT * FROM "config_history" WHERE service_id = 'auth-service' AND version = 1234 ORDER BY "config_history"."id" LIMIT 1
+
+2026/05/23 20:34:55 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:402
+[2.789ms] [rows:1] SELECT count(*) FROM information_schema.tables WHERE table_schema = CURRENT_SCHEMA() AND table_name = 'migrations' AND table_type = 'BASE TABLE'
+
+2026/05/23 20:34:55 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:413
+[0.405ms] [rows:1] SELECT count(*) FROM "migrations" WHERE id = '20260321_create_table'
+
+2026/05/23 20:34:56 /home/delorency/work/config-service/internal/repo/repo.go:38 record not found
+[0.966ms] [rows:0] SELECT * FROM "config_history" WHERE service_id = 'auth-service' AND version = 1234 ORDER BY "config_history"."id" LIMIT 1
+
+2026/05/23 20:35:32 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:402
+[2.485ms] [rows:1] SELECT count(*) FROM information_schema.tables WHERE table_schema = CURRENT_SCHEMA() AND table_name = 'migrations' AND table_type = 'BASE TABLE'
+
+2026/05/23 20:35:32 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:413
+[0.430ms] [rows:1] SELECT count(*) FROM "migrations" WHERE id = '20260321_create_table'
+
+2026/05/23 20:35:32 /home/delorency/work/config-service/internal/repo/repo.go:38 record not found
+[1.067ms] [rows:0] SELECT * FROM "config_history" WHERE service_id = 'auth-service' AND version = 1234 ORDER BY "config_history"."id" LIMIT 1
+
+2026/05/23 20:37:54 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:402
+[2.513ms] [rows:1] SELECT count(*) FROM information_schema.tables WHERE table_schema = CURRENT_SCHEMA() AND table_name = 'migrations' AND table_type = 'BASE TABLE'
+
+2026/05/23 20:37:54 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:413
+[0.479ms] [rows:1] SELECT count(*) FROM "migrations" WHERE id = '20260321_create_table'
+
+2026/05/23 20:38:10 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:402
+[2.625ms] [rows:1] SELECT count(*) FROM information_schema.tables WHERE table_schema = CURRENT_SCHEMA() AND table_name = 'migrations' AND table_type = 'BASE TABLE'
+
+2026/05/23 20:38:10 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:413
+[0.467ms] [rows:1] SELECT count(*) FROM "migrations" WHERE id = '20260321_create_table'
+
+2026/05/23 20:38:11 /home/delorency/work/config-service/internal/repo/repo.go:38 record not found
+[1.082ms] [rows:0] SELECT * FROM "config_history" WHERE service_id = 'auth-service' AND version = 1234 ORDER BY "config_history"."id" LIMIT 1
+
+2026/05/23 20:38:27 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:402
+[2.490ms] [rows:1] SELECT count(*) FROM information_schema.tables WHERE table_schema = CURRENT_SCHEMA() AND table_name = 'migrations' AND table_type = 'BASE TABLE'
+
+2026/05/23 20:38:27 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:413
+[0.388ms] [rows:1] SELECT count(*) FROM "migrations" WHERE id = '20260321_create_table'
+
+2026/05/23 20:38:28 /home/delorency/work/config-service/internal/repo/repo.go:38 record not found
+[0.880ms] [rows:0] SELECT * FROM "config_history" WHERE service_id = 'auth-service' AND version = 1234 ORDER BY "config_history"."id" LIMIT 1
+
+2026/05/23 20:39:44 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:402
+[3.025ms] [rows:1] SELECT count(*) FROM information_schema.tables WHERE table_schema = CURRENT_SCHEMA() AND table_name = 'migrations' AND table_type = 'BASE TABLE'
+
+2026/05/23 20:39:44 /home/delorency/go/pkg/mod/github.com/go-gormigrate/gormigrate/v2@v2.1.5/gormigrate.go:413
+[0.438ms] [rows:1] SELECT count(*) FROM "migrations" WHERE id = '20260321_create_table'
+
+2026/05/23 20:39:45 /home/delorency/work/config-service/internal/repo/repo.go:38 record not found
+[2.667ms] [rows:0] SELECT * FROM "config_history" WHERE service_id = 'auth-service' AND version = 1234 ORDER BY "config_history"."id" LIMIT 1

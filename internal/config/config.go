@@ -28,26 +28,6 @@ type ConfigDatabase struct {
 	Port string `env:"DB_PORT"`
 }
 
-type ConfigRedis struct {
-	Host     string `env:"REDIS_HOST"`
-	Port     int    `env:"REDIS_PORT"`
-	Username string `env:"REDIS_USERNAME"`
-	Pass     string `env:"REDIS_PASS"`
-	DB       int    `env:"REDIS_DB"`
-}
-
-type ConfigRabbitMQ struct {
-	Host     string `env:"RABBIT_HOST" default:"localhost"`
-	Port     int    `env:"RABBIT_PORT" default:"5672"`
-	User     string `env:"RABBIT_USER" default:"guest"`
-	Password string `env:"RABBIT_PASSWORD" default:"guest"`
-	VHost    string `env:"RABBIT_VHOST" default:"/"`
-
-	ExchangeName string `env:"RABBIT_EXCHANGE_NAME" default:"config.updates"`
-	ExchangeType string `env:"RABBIT_EXCHANGE_TYPE" default:"fanout"`
-	QueuePrefix  string `env:"RABBIT_QUEUE_PREFIX" default:"config-service."`
-}
-
 type ConfigLogger struct {
 	APIlp   string `env:"APILOGFILENAME"`
 	DBlp    string `env:"DBLOGFILENAME"`
@@ -63,8 +43,6 @@ type Config struct {
 	HTTPServer *ConfigHTTPServer
 	GRPCServer *ConfigGRPCServer
 	Db         *ConfigDatabase
-	Redis      *ConfigRedis
-	Rabbit     *ConfigRabbitMQ
 	Logger     *ConfigLogger
 	Schema     *ConfigSchema
 }
@@ -77,8 +55,6 @@ func MustLoad() *Config {
 	var cfgHTTPServer ConfigHTTPServer
 	var cfgGRPCServer ConfigGRPCServer
 	var cfgDatabase ConfigDatabase
-	var cfgRedis ConfigRedis
-	var cfgRabbit ConfigRabbitMQ
 	var cfgLogger ConfigLogger
 	var cfgSchema ConfigSchema
 
@@ -91,12 +67,6 @@ func MustLoad() *Config {
 	if err := cleanenv.ReadEnv(&cfgDatabase); err != nil {
 		log.Fatalln("Ошибка чтения настроек db из .env файлы")
 	}
-	if err := cleanenv.ReadEnv(&cfgRedis); err != nil {
-		log.Fatalln("Ошибка чтения настроек redis из .env файла")
-	}
-	if err := cleanenv.ReadEnv(&cfgRabbit); err != nil {
-		log.Fatalln("Ошибка чтения настроек rabbitmq из .env файла")
-	}
 	if err := cleanenv.ReadEnv(&cfgLogger); err != nil {
 		log.Fatalln("Ошибка чтения настроек logger из .env файла")
 	}
@@ -104,5 +74,5 @@ func MustLoad() *Config {
 		log.Fatalln("Ошибка чтения настроек schema из .env файла")
 	}
 
-	return &Config{&cfgHTTPServer, &cfgGRPCServer, &cfgDatabase, &cfgRedis, &cfgRabbit, &cfgLogger, &cfgSchema}
+	return &Config{&cfgHTTPServer, &cfgGRPCServer, &cfgDatabase, &cfgLogger, &cfgSchema}
 }
